@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./assets/css/style.css" rel="stylesheet" />
+    <title>Eventify - Find & Book Amazing Events</title>
 </head>
 
 <body class="bg-base-100">
     <!-- Navigation Bar -->
-    <div class="navbar bg-white shadow-md sticky top-0 z-50">
+    <div class="navbar bg-white shadow-sm sticky top-0 z-50 md:px-14">
+        <!-- Logo and Hamburger Menu -->
         <div class="navbar-start">
             <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden ps-0 pe-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -27,12 +29,13 @@
                     <li><a class="font-medium">Galleries</a></li>
                 </ul>
             </div>
-            <a class="btn btn-ghost text-xl">
-                <span class="text-primary font-bold">Event</span><span class="text-secondary font-bold">Hub</span>
+            <a class="btn btn-ghost text-xl px-0">
+                <span class="text-primary font-bold">Event<span class="text-secondary font-bold">ify</span></span>
             </a>
         </div>
+        <!-- Centered Menu -->
         <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
+            <ul class="menu flex gap-x-8 menu-horizontal px-1">
                 <li><a class="font-medium">Home</a></li>
                 <li><a class="font-medium">Events</a></li>
                 <li><a class="font-medium">About</a></li>
@@ -40,30 +43,31 @@
             </ul>
         </div>
         <div class="navbar-end">
-            <a class="btn bg-primary hover:bg-primary-focus text-white border-none">Book Now</a>
+            <a class="btn bg-primary text-balance hover:bg-primary-focus text-white border-none rounded-full">Book Now</a>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <div class="hero min-h-[80vh] vibrant-gradient">
-        <div class="hero-content flex-col lg:flex-row-reverse gap-8">
+    <!-- Hero Section - Updated with better layout and animations -->
+    <div class="hero min-h-[90vh] vibrant-gradient relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="hero-content flex-col lg:flex-row-reverse gap-12 z-10 max-w-7xl">
             <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                class="max-w-sm rounded-lg shadow-2xl" alt="Event image" />
-            <div>
-                <h1 class="text-5xl font-bold text-white">Find & Book Amazing Events</h1>
-                <p class="py-6 text-lg text-white">Discover and book the perfect events for any occasion. From
+                class="max-w-md w-full rounded-lg shadow-2xl animate-fade-in-right" alt="Event image" />
+            <div class="animate-fade-in-left">
+                <h1 class="text-5xl lg:text-6xl font-bold text-white drop-shadow-md">Find & Book Amazing Events</h1>
+                <p class="py-6 text-lg text-white drop-shadow-sm max-w-2xl">Discover and book the perfect events for any occasion. From
                     conferences to concerts, workshops to weddings, we've got you covered.</p>
                 <div class="flex flex-wrap gap-4">
-                    <button class="btn bg-white hover:bg-gray-100 text-primary border-none">Explore Events</button>
-                    <button class="btn bg-secondary hover:bg-secondary-focus text-white border-none">How It
+                    <button class="btn btn-lg text-sm bg-white hover:bg-gray-100 text-primary border-none rounded-full shadow-lg">Explore Events</button>
+                    <button class="btn btn-lg text-sm bg-secondary hover:bg-secondary-focus text-white border-none rounded-full shadow-lg">How It
                         Works</button>
                 </div>
-                <div class="stats shadow mt-8 bg-white">
+                <div class="stats shadow-xl mt-8 bg-white/90 backdrop-blur-sm rounded-xl">
                     <div class="stat">
                         <div class="stat-figure text-primary">
                             <i class="fa-solid fa-calendar-check text-3xl"></i>
                         </div>
-                        <div class="stat-title">Events</div>
+                        <div class="stat-title font-medium">Events</div>
                         <div class="stat-value text-primary">500+</div>
                         <div class="stat-desc">Jan 1st - Feb 1st</div>
                     </div>
@@ -72,7 +76,7 @@
                         <div class="stat-figure text-secondary">
                             <i class="fa-solid fa-users text-3xl"></i>
                         </div>
-                        <div class="stat-title">Happy Clients</div>
+                        <div class="stat-title font-medium">Happy Clients</div>
                         <div class="stat-value text-secondary">10K+</div>
                         <div class="stat-desc">↗︎ 400 (22%)</div>
                     </div>
@@ -81,26 +85,31 @@
                         <div class="stat-figure text-accent">
                             <i class="fa-solid fa-star text-3xl"></i>
                         </div>
-                        <div class="stat-title">Reviews</div>
+                        <div class="stat-title font-medium">Reviews</div>
                         <div class="stat-value text-accent">4.9</div>
                         <div class="stat-desc">★★★★★</div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="custom-shape-divider-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#FFFFFF" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,213.3C384,203,480,213,576,229.3C672,245,768,267,864,261.3C960,256,1056,224,1152,208C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
     </div>
 
-    <!-- Search Section -->
-    <div class="container mx-auto px-4 py-12">
-        <div class="card bg-white shadow-xl">
-            <div class="card-body">
-                <h2 class="card-title text-2xl mb-4 text-neutral">Find Your Perfect Event</h2>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <!-- Search Section - Enhanced with better styling -->
+    <div class="container mx-auto px-4 py-12 -mt-24 relative z-20">
+        <div class="card bg-white shadow-2xl rounded-2xl border border-gray-50">
+            <div class="card-body p-8">
+                <h2 class="card-title text-2xl font-bold mb-6 text-neutral">Find Your Perfect Event</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                     <div class="form-control">
-                        <label class="label">
-                            <span class="label-text">Event Type</span>
+                        <label class="label mb-1">
+                            <span class="label-text font-medium">Event Type</span>
                         </label>
-                        <select class="select select-bordered w-full bg-base-100 border-primary focus:border-primary">
+                        <select class="select select-bordered w-full bg-base-100 border-primary focus:border-primary rounded-lg h-14">
                             <option disabled selected>Select type</option>
                             <option>Conference</option>
                             <option>Concert</option>
@@ -110,10 +119,10 @@
                         </select>
                     </div>
                     <div class="form-control">
-                        <label class="label">
-                            <span class="label-text">Location</span>
+                        <label class="label mb-1">
+                            <span class="label-text font-medium">Location</span>
                         </label>
-                        <select class="select select-bordered w-full bg-base-100 border-primary focus:border-primary">
+                        <select class="select select-bordered w-full bg-base-100 border-primary focus:border-primary rounded-lg h-14">
                             <option disabled selected>Select location</option>
                             <option>Jakarta</option>
                             <option>Bandung</option>
@@ -123,15 +132,21 @@
                         </select>
                     </div>
                     <div class="form-control">
-                        <label class="label">
-                            <span class="label-text">Date</span>
+                        <label class="label mb-1">
+                            <span class="label-text font-medium">Date</span>
                         </label>
                         <input type="date"
-                            class="input input-bordered w-full bg-base-100 border-primary focus:border-primary" />
+                            class="input input-bordered w-full bg-base-100 border-primary focus:border-primary rounded-lg h-14" />
                     </div>
-                    <div class="form-control mt-8">
-                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none">Search
-                            Events</button>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text font-medium"></span>
+                        </label>
+                        <div>
+                            <button class="btn bg-primary hover:bg-primary-focus text-white border-none h-14 rounded-lg shadow-md">
+                                <i class="fa-solid fa-magnifying-glass mr-2"></i> Search Events
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -167,23 +182,23 @@
         </div>
     </div>
 
-    <!-- Latest Events Section -->
+    <!-- Latest Events Section - Updated card sizing -->
     <div class="container mx-auto px-4 py-16">
-        <div class="flex justify-between items-center mb-8">
+        <div class="flex justify-between items-center mb-12">
             <h2 class="text-3xl font-bold text-neutral">Latest Events</h2>
-            <a href="#" class="btn btn-outline border-primary text-primary hover:bg-primary hover:text-white">View
+            <a href="#" class="btn btn-outline border-primary text-primary hover:bg-primary hover:text-white rounded-full">View
                 All</a>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Event Card 1 -->
-            <div class="card bg-white shadow-xl card-hover">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Event Card 1 - Resized -->
+            <div class="card bg-white shadow-xl card-hover rounded-xl overflow-hidden">
                 <figure><img
                         src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                        alt="Tech Conference" class="h-48 w-full object-cover" /></figure>
-                <div class="card-body">
-                    <div class="badge bg-secondary text-white border-none mb-2">Conference</div>
-                    <h2 class="card-title text-neutral">Tech Innovation Summit 2023</h2>
+                        alt="Tech Conference" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-secondary text-white border-none mb-2 p-3">Conference</div>
+                    <h2 class="card-title text-neutral text-xl">Tech Innovation Summit 2023</h2>
                     <div class="flex items-center gap-2 text-gray-600 mb-2">
                         <i class="fa-solid fa-calendar-days"></i>
                         <span>March 15, 2023</span>
@@ -196,20 +211,21 @@
                         industry leaders.</p>
                     <div class="card-actions justify-between items-center mt-4">
                         <span class="text-lg font-bold text-primary">$299</span>
-                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm">Book
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Book
                             Now</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Event Card 2 -->
-            <div class="card bg-white shadow-xl card-hover">
-                <figure><img
+            <!-- Event Card 2 - Resized -->
+            <div class="card bg-white shadow-xl card-hover rounded-xl overflow-hidden">
+                <figure>
+                    <img
                         src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                        alt="Music Festival" class="h-48 w-full object-cover" /></figure>
-                <div class="card-body">
-                    <div class="badge bg-accent text-white border-none mb-2">Concert</div>
-                    <h2 class="card-title text-neutral">Summer Music Festival</h2>
+                        alt="Music Festival" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-accent text-white border-none mb-2 p-3">Concert</div>
+                    <h2 class="card-title text-neutral text-xl">Summer Music Festival</h2>
                     <div class="flex items-center gap-2 text-gray-600 mb-2">
                         <i class="fa-solid fa-calendar-days"></i>
                         <span>April 10-12, 2023</span>
@@ -222,20 +238,20 @@
                         beach setting.</p>
                     <div class="card-actions justify-between items-center mt-4">
                         <span class="text-lg font-bold text-primary">$149</span>
-                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm">Book
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Book
                             Now</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Event Card 3 -->
-            <div class="card bg-white shadow-xl card-hover">
+            <!-- Event Card 3 - Resized -->
+            <div class="card bg-white shadow-xl card-hover rounded-xl overflow-hidden">
                 <figure><img
                         src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
-                        alt="Workshop" class="h-48 w-full object-cover" /></figure>
-                <div class="card-body">
-                    <div class="badge bg-primary text-white border-none mb-2">Workshop</div>
-                    <h2 class="card-title text-neutral">Digital Marketing Masterclass</h2>
+                        alt="Workshop" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-primary text-white border-none mb-2 p-3">Workshop</div>
+                    <h2 class="card-title text-neutral text-xl">Digital Marketing Masterclass</h2>
                     <div class="flex items-center gap-2 text-gray-600 mb-2">
                         <i class="fa-solid fa-calendar-days"></i>
                         <span>March 25, 2023</span>
@@ -248,7 +264,7 @@
                         hands-on workshop.</p>
                     <div class="card-actions justify-between items-center mt-4">
                         <span class="text-lg font-bold text-primary">$99</span>
-                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm">Book
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Book
                             Now</button>
                     </div>
                 </div>
@@ -306,7 +322,7 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="mb-6 text-gray-600">"EventHub made planning our corporate retreat so easy. The booking
+                    <p class="mb-6 text-gray-600">"Eventify made planning our corporate retreat so easy. The booking
                         process was seamless, and the event exceeded our expectations!"</p>
                     <div class="flex items-center gap-4">
                         <div class="avatar">
@@ -332,7 +348,7 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="mb-6 text-gray-600">"We booked our wedding through EventHub and couldn't be happier. The
+                    <p class="mb-6 text-gray-600">"We booked our wedding through Eventify and couldn't be happier. The
                         venue was perfect, and the staff was incredibly helpful throughout the process."</p>
                     <div class="flex items-center gap-4">
                         <div class="avatar">
@@ -358,7 +374,7 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <p class="mb-6 text-gray-600">"The conference we attended through EventHub was well-organized and
+                    <p class="mb-6 text-gray-600">"The conference we attended through Eventify was well-organized and
                         provided great networking opportunities. Will definitely use their platform again!"</p>
                     <div class="flex items-center gap-4">
                         <div class="avatar">
@@ -381,70 +397,78 @@
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-4 text-neutral">Ready to Host Your Next Event?</h2>
             <p class="text-lg mb-8 max-w-2xl mx-auto text-gray-600">Join thousands of satisfied customers who have
-                successfully planned and executed their events with EventHub.</p>
+                successfully planned and executed their events with Eventify.</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <button class="btn bg-primary hover:bg-primary-focus text-white border-none">Get Started</button>
-                <button class="btn bg-secondary hover:bg-secondary-focus text-white border-none">Contact Sales</button>
+                <button class="btn bg-primary hover:bg-primary-focus text-white border-none rounded-full">Get Started</button>
+                <button class="btn bg-secondary hover:bg-secondary-focus text-white border-none rounded-full">Contact Sales</button>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer flex justify-between p-10 bg-neutral text-neutral-content">
-        <div>
-            <span class="footer-title">Services</span>
-            <a class="link link-hover">Event Planning</a>
-            <a class="link link-hover">Venue Booking</a>
-            <a class="link link-hover">Catering</a>
-            <a class="link link-hover">Entertainment</a>
-        </div>
-        <div>
-            <span class="footer-title">Company</span>
-            <a class="link link-hover">About us</a>
-            <a class="link link-hover">Contact</a>
-            <a class="link link-hover">Jobs</a>
-            <a class="link link-hover">Press kit</a>
-        </div>
-        <div>
-            <span class="footer-title">Legal</span>
-            <a class="link link-hover">Terms of use</a>
-            <a class="link link-hover">Privacy policy</a>
-            <a class="link link-hover">Cookie policy</a>
-        </div>
-        <div>
-            <span class="footer-title">Newsletter</span>
-            <div class="form-control w-80">
-                <label class="label">
-                    <span class="label-text text-neutral-content">Enter your email address</span>
-                </label>
-                <div class="relative">
-                    <input type="text" placeholder="username@site.com"
-                        class="input input-bordered w-full pr-16 bg-neutral-focus text-neutral-content" />
-                    <button
-                        class="btn bg-secondary hover:bg-secondary-focus border-none absolute top-0 right-0 rounded-l-none text-white">Subscribe</button>
+    <!-- Footer - Improved design -->
+    <footer class="bg-neutral text-neutral-content">
+        <div class="container mx-auto">
+            <div class="footer grid-cols-1 pb-10 pt-20 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <a class="text-2xl font-bold mb-4 inline-block">Event<span class="text-secondary">ify</span></a>
+                    <p class="mb-4 max-w-xs">Providing reliable event booking services since 2020. Your one-stop solution for discovering and booking amazing events.</p>
+                    <div class="flex gap-4">
+                        <a class="btn btn-circle btn-ghost hover:bg-white/10">
+                            <i class="fa-brands fa-twitter text-xl"></i>
+                        </a>
+                        <a class="btn btn-circle btn-ghost hover:bg-white/10">
+                            <i class="fa-brands fa-facebook text-xl"></i>
+                        </a>
+                        <a class="btn btn-circle btn-ghost hover:bg-white/10">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a class="btn btn-circle btn-ghost hover:bg-white/10">
+                            <i class="fa-brands fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <span class="footer-title">Services</span>
+                    <a class="link link-hover block mb-2">Event Planning</a>
+                    <a class="link link-hover block mb-2">Venue Booking</a>
+                    <a class="link link-hover block mb-2">Catering</a>
+                    <a class="link link-hover block mb-2">Entertainment</a>
+                    <a class="link link-hover block mb-2">Photography</a>
+                </div>
+                <div>
+                    <span class="footer-title">Company</span>
+                    <a class="link link-hover block mb-2">About us</a>
+                    <a class="link link-hover block mb-2">Contact</a>
+                    <a class="link link-hover block mb-2">Jobs</a>
+                    <a class="link link-hover block mb-2">Press kit</a>
+                    <a class="link link-hover block mb-2">Blog</a>
+                </div>
+                <div>
+                    <span class="footer-title">Newsletter</span>
+                    <p class="mb-4">Subscribe to our newsletter for the latest updates on events and promotions.</p>
+                    <div class="form-control w-full">
+                        <div class="relative">
+                            <input type="text" placeholder="Your email address"
+                                class="input input-bordered w-full pr-16 bg-neutral-focus text-neutral-content rounded-full" />
+                            <button
+                                class="btn bg-secondary hover:bg-secondary-focus border-none absolute top-0 right-0 rounded-l-none rounded-r-full text-white">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <footer class="footer px-10 py-4 border-t bg-neutral text-neutral-content border-base-300">
-        <div class="items-center grid-flow-col">
-            <a class="text-xl font-bold">Event<span class="text-secondary">Hub</span></a>
-            <p>EventHub Ltd. <br />Providing reliable event booking since 2020</p>
-        </div>
-        <div class="md:place-self-center md:justify-self-end">
-            <div class="grid grid-flow-col gap-4">
-                <a class="btn btn-ghost btn-circle">
-                    <i class="fa-brands fa-twitter text-xl"></i>
-                </a>
-                <a class="btn btn-ghost btn-circle">
-                    <i class="fa-brands fa-youtube text-xl"></i>
-                </a>
-                <a class="btn btn-ghost btn-circle">
-                    <i class="fa-brands fa-facebook text-xl"></i>
-                </a>
-                <a class="btn btn-ghost btn-circle">
-                    <i class="fa-brands fa-instagram text-xl"></i>
-                </a>
+            <div class="footer py-4 border-t border-neutral-focus">
+                <div class="grid-flow-col">
+                    <p>© 2025 Eventify Ltd. All rights reserved.</p>
+                </div>
+                <div class="md:place-self-center md:justify-self-end">
+                    <div class="flex gap-6">
+                        <a class="link link-hover">Terms of use</a>
+                        <a class="link link-hover">Privacy policy</a>
+                        <a class="link link-hover">Cookie policy</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

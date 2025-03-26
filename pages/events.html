@@ -1,0 +1,558 @@
+<!doctype html>
+<html data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Eventify - Browse Events</title>
+</head>
+
+<body class="bg-base-100">
+    <!-- Navigation Bar -->
+    <div class="navbar bg-white shadow-sm sticky top-0 z-50 md:px-14">
+        <!-- Logo and Hamburger Menu -->
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden ps-0 pe-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="../index.html" class="font-medium">Home</a></li>
+                    <li><a href="./events.html" class="font-medium text-primary">Events</a></li>
+                    <li><a class="font-medium">About</a></li>
+                    <li><a class="font-medium">Galleries</a></li>
+                </ul>
+            </div>
+            <a href="../index.html" class="btn btn-ghost text-xl px-0">
+                <span class="text-primary font-bold">Event<span class="text-secondary font-bold">ify</span></span>
+            </a>
+        </div>
+        <!-- Centered Menu -->
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu flex gap-x-8 menu-horizontal px-1">
+                <li><a href="../index.html" class="font-medium">Home</a></li>
+                <li><a href="./events.html" class="font-medium text-primary">Events</a></li>
+                <li><a class="font-medium">About</a></li>
+                <li><a class="font-medium">Galleries</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn bg-primary text-balance hover:bg-primary-focus text-white border-none rounded-full">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="bg-gradient-to-r from-primary to-secondary py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Discover Amazing Events</h1>
+                <p class="text-white text-lg max-w-2xl mx-auto">Browse our collection of conferences, concerts, workshops, and more. Find your next unforgettable experience.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Section -->
+    <div class="container mx-auto px-4 py-12 -mt-5 relative z-20">
+        <div class="card bg-white shadow-xl rounded-2xl border border-gray-50">
+            <div class="card-body p-4 sm:p-6 md:p-8">
+                <h2 class="card-title text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-neutral">Find Events</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6">
+                    <div class="form-control">
+                        <label class="label mb-1">
+                            <span class="label-text font-medium">Event Type</span>
+                        </label>
+                        <select class="select select-bordered w-full bg-base-100 border-primary focus:border-primary rounded-lg h-12 md:h-14">
+                            <option disabled selected>Select type</option>
+                            <option>Conference</option>
+                            <option>Concert</option>
+                            <option>Workshop</option>
+                            <option>Wedding</option>
+                            <option>Corporate</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label class="label mb-1">
+                            <span class="label-text font-medium">Location</span>
+                        </label>
+                        <select class="select select-bordered w-full bg-base-100 border-primary focus:border-primary rounded-lg h-12 md:h-14">
+                            <option disabled selected>Select location</option>
+                            <option>Jakarta</option>
+                            <option>Bandung</option>
+                            <option>Surabaya</option>
+                            <option>Bali</option>
+                            <option>Yogyakarta</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label class="label mb-1">
+                            <span class="label-text font-medium">Date</span>
+                        </label>
+                        <input type="date"
+                            class="input input-bordered w-full bg-base-100 border-primary focus:border-primary rounded-lg h-12 md:h-14" />
+                    </div>
+                    <div class="form-control">
+                        <label class="label mb-1">
+                            <span class="label-text font-medium text-white">searching</span>
+                        </label>
+                        <div>
+                            <button class="btn bg-primary hover:bg-primary-focus text-white border-none h-12 md:h-14 rounded-lg shadow-md w-full">
+                                <i class='bx bx-search-alt-2 text-lg'></i> Search Events
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest Events Section -->
+    <div class="container mx-auto px-4 py-8 sm:py-12">
+        <div class="flex justify-between items-center mb-8 sm:mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-neutral">Latest Events</h2>
+            <div class="flex items-center gap-2">
+                <span class="text-gray-600">Sort by:</span>
+                <select class="select select-bordered select-sm w-auto min-h-8 h-8 border-gray-300">
+                    <option>Newest</option>
+                    <option>Popular</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <!-- Event Card 1 -->
+            <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
+                <figure><img
+                        src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="Tech Conference" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-secondary text-white border-none mb-2 p-3">Conference</div>
+                    <h2 class="card-title text-neutral text-xl">Tech Innovation Summit 2023</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class='bx bx-calendar text-lg'></i>
+                        <span>March 15, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class='bx bx-map text-lg'></i>
+                        <span>Jakarta Convention Center</span>
+                    </div>
+                    <p class="text-gray-600">Join the biggest tech conference in Southeast Asia featuring keynotes from
+                        industry leaders.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$299</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
+                <figure>
+                    <img
+                        src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="Music Festival" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-accent text-white border-none mb-2 p-3">Concert</div>
+                    <h2 class="card-title text-neutral text-xl">Summer Music Festival</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class='bx bx-calendar text-lg'></i>
+                        <span>April 10-12, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class='bx bx-map text-lg'></i>
+                        <span>Bali Beach Resort</span>
+                    </div>
+                    <p class="text-gray-600">Three days of amazing music performances by top artists in a beautiful
+                        beach setting.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$149</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
+                <figure><img
+                        src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                        alt="Workshop" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-primary text-white border-none mb-2 p-3">Workshop</div>
+                    <h2 class="card-title text-neutral text-xl">Digital Marketing Masterclass</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class='bx bx-calendar text-lg'></i>
+                        <span>March 25, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class='bx bx-map text-lg'></i>
+                        <span>Bandung Creative Hub</span>
+                    </div>
+                    <p class="text-gray-600">Learn advanced digital marketing strategies from industry experts in this
+                        hands-on workshop.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$99</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 4 -->
+            <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
+                <figure><img
+                        src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1112&q=80"
+                        alt="Art Exhibition" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-secondary text-white border-none mb-2 p-3">Exhibition</div>
+                    <h2 class="card-title text-neutral text-xl">Contemporary Art Exhibition</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class='bx bx-calendar text-lg'></i>
+                        <span>April 5-20, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class='bx bx-map text-lg'></i>
+                        <span>National Gallery, Jakarta</span>
+                    </div>
+                    <p class="text-gray-600">Experience stunning works from contemporary artists across Southeast Asia in this limited exhibition.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$25</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 5 -->
+            <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
+                <figure><img
+                        src="https://images.unsplash.com/photo-1470753937643-efeb931202a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="Food Festival" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-accent text-white border-none mb-2 p-3">Food & Drink</div>
+                    <h2 class="card-title text-neutral text-xl">Asian Food Festival</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class='bx bx-calendar text-lg'></i>
+                        <span>March 30-31, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class='bx bx-map text-lg'></i>
+                        <span>Central Park, Jakarta</span>
+                    </div>
+                    <p class="text-gray-600">Sample delicious foods from across Asia at this exciting weekend culinary festival.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$15</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 6 -->
+            <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
+                <figure><img
+                        src="https://images.unsplash.com/photo-1560439513-74b037a25d84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="Business Networking" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-primary text-white border-none mb-2 p-3">Networking</div>
+                    <h2 class="card-title text-neutral text-xl">Business Leaders Meetup</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class='bx bx-calendar text-lg'></i>
+                        <span>April 18, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class='bx bx-map text-lg'></i>
+                        <span>Grand Hyatt, Jakarta</span>
+                    </div>
+                    <p class="text-gray-600">Connect with business leaders and entrepreneurs at this premier networking event.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$75</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Divider with category filter -->
+    <div class="bg-base-200 py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-neutral">More Events</h2>
+                <div class="flex flex-wrap justify-center gap-2">
+                    <button class="btn btn-sm btn-primary rounded-full">All</button>
+                    <button class="btn btn-sm btn-outline rounded-full">Conferences</button>
+                    <button class="btn btn-sm btn-outline rounded-full">Concerts</button>
+                    <button class="btn btn-sm btn-outline rounded-full">Workshops</button>
+                    <button class="btn btn-sm btn-outline rounded-full">Exhibitions</button>
+                    <button class="btn btn-sm btn-outline rounded-full">Sports</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- More Events Section -->
+    <div class="container mx-auto px-4 py-12 sm:py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <!-- Event Card 1 -->
+            <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
+                <figure><img
+                        src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="Corporate Event" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-secondary text-white border-none mb-2 p-3">Corporate</div>
+                    <h2 class="card-title text-neutral text-xl">Annual Business Summit</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class='bx bx-calendar text-lg'></i>
+                        <span>May 8-9, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class='bx bx-map text-lg'></i>
+                        <span>Ritz-Carlton, Jakarta</span>
+                    </div>
+                    <p class="text-gray-600">Join industry leaders for this exclusive summit on business transformation and growth strategies.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$399</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
+                <figure><img
+                        src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+                        alt="Music Concert" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-accent text-white border-none mb-2 p-3">Concert</div>
+                    <h2 class="card-title text-neutral text-xl">Rock Legends Live</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class='bx bx-calendar text-lg'></i>
+                        <span>May 20, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class='bx bx-map text-lg'></i>
+                        <span>Gelora Bung Karno, Jakarta</span>
+                    </div>
+                    <p class="text-gray-600">Experience an unforgettable night with performances from legendary rock bands and artists.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$120</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
+                <figure><img
+                        src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                        alt="Sports Event" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-primary text-white border-none mb-2 p-3">Sports</div>
+                    <h2 class="card-title text-neutral text-xl">International Marathon</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class='bx bx-calendar text-lg'></i>
+                        <span>June 5, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class='bx bx-map text-lg'></i>
+                        <span>Jakarta City Center</span>
+                    </div>
+                    <p class="text-gray-600">Participate in this prestigious marathon through the heart of Jakarta with runners from around the world.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$45</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Register
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 4 -->
+            <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
+                <figure><img
+                        src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="Wedding Expo" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-secondary text-white border-none mb-2 p-3">Expo</div>
+                    <h2 class="card-title text-neutral text-xl">Luxury Wedding Showcase</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class='bx bx-calendar text-lg'></i>
+                        <span>April 28-30, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class='bx bx-map text-lg'></i>
+                        <span>JCC Senayan, Jakarta</span>
+                    </div>
+                    <p class="text-gray-600">Discover the latest wedding trends, services, and vendors at this premier bridal exhibition.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$10</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 5 -->
+            <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
+                <figure><img
+                        src="https://images.unsplash.com/photo-1551818176-60579e574b91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80"
+                        alt="Science Conference" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-accent text-white border-none mb-2 p-3">Conference</div>
+                    <h2 class="card-title text-neutral text-xl">Science & Technology Forum</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class='bx bx-calendar text-lg'></i>
+                        <span>May 12-13, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class='bx bx-map text-lg'></i>
+                        <span>UI Campus, Depok</span>
+                    </div>
+                    <p class="text-gray-600">Join researchers and scientists for discussions on the latest breakthroughs and innovations.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$80</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 6 -->
+            <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
+                <figure><img
+                        src="https://images.unsplash.com/photo-1508997449629-303059a039c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="Comedy Show" class="h-56 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                <div class="card-body p-6">
+                    <div class="badge bg-primary text-white border-none mb-2 p-3">Entertainment</div>
+                    <h2 class="card-title text-neutral text-xl">Comedy Night Spectacular</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class='bx bx-calendar text-lg'></i>
+                        <span>April 22, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class='bx bx-map text-lg'></i>
+                        <span>The Laughing Club, Jakarta</span>
+                    </div>
+                    <p class="text-gray-600">Enjoy a night of laughter with performances from top stand-up comedians from across Asia.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$35</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center mt-12">
+            <div class="btn-group">
+                <button class="btn btn-outline">«</button>
+                <button class="btn btn-outline bg-primary text-white">1</button>
+                <button class="btn btn-outline">2</button>
+                <button class="btn btn-outline">3</button>
+                <button class="btn btn-outline">4</button>
+                <button class="btn btn-outline">»</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Events Newsletter -->
+    <div class="bg-gradient-to-r from-primary to-secondary py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-white">Never Miss an Event</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto text-white">Subscribe to our newsletter and be the first to know about upcoming events and exclusive promotions.</p>
+            <div class="max-w-md mx-auto">
+                <div class="form-control">
+                    <div class="relative">
+                        <input type="email" placeholder="Your email address" class="input input-bordered w-full pr-16 rounded-full h-14" />
+                        <button class="btn bg-white hover:bg-gray-100 text-primary absolute top-0 right-0 rounded-l-none rounded-r-full h-14 px-6">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer - Same as homepage -->
+    <footer class="bg-neutral text-neutral-content">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 pb-10 pt-20 gap-8">
+                <div class="md:col-span-5 lg:col-span-5">
+                    <a class="text-2xl font-bold mb-4 inline-block">Event<span class="text-secondary">ify</span></a>
+                    <p class="mb-4 max-w-md text-sm">Providing reliable event booking services since 2020. Your one-stop solution for discovering and booking amazing events.</p>
+                    <div class="flex gap-4">
+                        <a class="btn btn-circle btn-ghost hover:bg-white/10">
+                            <i class='bx bxl-twitter text-xl'></i>
+                        </a>
+                        <a class="btn btn-circle btn-ghost hover:bg-white/10">
+                            <i class='bx bxl-facebook text-xl'></i>
+                        </a>
+                        <a class="btn btn-circle btn-ghost hover:bg-white/10">
+                            <i class='bx bxl-instagram text-xl'></i>
+                        </a>
+                        <a class="btn btn-circle btn-ghost hover:bg-white/10">
+                            <i class='bx bxl-linkedin text-xl'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-2 lg:col-span-2">
+                    <span class="footer-title block mb-2">Services</span>
+                    <a class="link link-hover block mb-2 text-sm">Event Planning</a>
+                    <a class="link link-hover block mb-2 text-sm">Venue Booking</a>
+                    <a class="link link-hover block mb-2 text-sm">Catering</a>
+                    <a class="link link-hover block mb-2 text-sm">Entertainment</a>
+                    <a class="link link-hover block mb-2 text-sm">Photography</a>
+                </div>
+                <div class="md:col-span-2 lg:col-span-2">
+                    <span class="footer-title block mb-2">Company</span>
+                    <a class="link link-hover block mb-2 text-sm">About us</a>
+                    <a class="link link-hover block mb-2 text-sm">Contact</a>
+                    <a class="link link-hover block mb-2 text-sm">Jobs</a>
+                    <a class="link link-hover block mb-2 text-sm">Press kit</a>
+                    <a class="link link-hover block mb-2 text-sm">Blog</a>
+                </div>
+                <div class="md:col-span-3 lg:col-span-3">
+                    <span class="footer-title block mb-2">Newsletter</span>
+                    <p class="mb-4 text-sm">Subscribe to our newsletter for the latest updates on events and promotions.</p>
+                    <div class="form-control w-full">
+                        <div class="relative">
+                            <input type="text" placeholder="Your email address"
+                                class="input input-bordered w-full pr-16 bg-neutral-focus text-neutral-content rounded-full" />
+                            <button
+                                class="btn bg-secondary hover:bg-secondary-focus border-none absolute top-0 right-0 rounded-l-none rounded-r-full text-white">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between py-4 border-t border-neutral-focus text-sm">
+                <div>
+                    <p>© 2025 Eventify Ltd. All rights reserved.</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <div class="flex flex-wrap md:flex-nowrap gap-4 md:gap-6">
+                        <a class="link link-hover">Terms of use</a>
+                        <a class="link link-hover">Privacy policy</a>
+                        <a class="link link-hover">Cookie policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

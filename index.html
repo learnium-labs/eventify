@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./assets/css/style.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Eventify - Find & Book Amazing Events</title>
 </head>
 
@@ -47,47 +48,47 @@
         </div>
     </div>
 
-    <!-- Hero Section - Updated with better layout and animations -->
+    <!-- Hero Section -->
     <div class="hero min-h-[90vh] vibrant-gradient relative overflow-hidden">
         <div class="absolute inset-0 bg-black opacity-10"></div>
-        <div class="hero-content flex-col lg:flex-row-reverse gap-12 z-10 max-w-7xl">
+        <div class="hero-content flex-col lg:flex-row-reverse gap-8 lg:gap-12 z-10 max-w-7xl px-4 py-8 md:py-12">
             <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                class="max-w-md w-full rounded-lg shadow-2xl animate-fade-in-right" alt="Event image" />
-            <div class="animate-fade-in-left">
-                <h1 class="text-5xl lg:text-6xl font-bold text-white drop-shadow-md">Find & Book Amazing Events</h1>
-                <p class="py-6 text-lg text-white drop-shadow-sm max-w-2xl">Discover and book the perfect events for any occasion. From
+                class="max-w-xs sm:max-w-sm md:max-w-md w-full rounded-lg shadow-2xl animate-fade-in-right" alt="Event image" />
+            <div class="animate-fade-in-left text-center lg:text-left">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white drop-shadow-md">Find & Book Amazing Events</h1>
+                <p class="py-4 sm:py-6 text-base sm:text-lg text-white drop-shadow-sm max-w-2xl mx-auto lg:mx-0">Discover and book the perfect events for any occasion. From
                     conferences to concerts, workshops to weddings, we've got you covered.</p>
-                <div class="flex flex-wrap gap-4">
-                    <button class="btn btn-lg text-sm bg-white hover:bg-gray-100 text-primary border-none rounded-full shadow-lg">Explore Events</button>
-                    <button class="btn btn-lg text-sm bg-secondary hover:bg-secondary-focus text-white border-none rounded-full shadow-lg">How It
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4 mt-2">
+                    <button class="btn sm:btn-lg text-sm bg-white hover:bg-gray-100 text-primary border-none rounded-full shadow-lg">Explore Events</button>
+                    <button class="btn sm:btn-lg text-sm bg-secondary hover:bg-secondary-focus text-white border-none rounded-full shadow-lg">How It
                         Works</button>
                 </div>
                 <div class="stats shadow-xl mt-8 bg-white/90 backdrop-blur-sm rounded-xl">
-                    <div class="stat">
-                        <div class="stat-figure text-primary">
-                            <i class="fa-solid fa-calendar-check text-3xl"></i>
+                    <div class="stat py-2 px-3 sm:py-4 sm:px-6">
+                        <div class="stat-figure text-primary hidden sm:block">
+                            <i class='bx bx-calendar-check text-3xl'></i>
                         </div>
                         <div class="stat-title font-medium">Events</div>
-                        <div class="stat-value text-primary">500+</div>
-                        <div class="stat-desc">Jan 1st - Feb 1st</div>
+                        <div class="stat-value text-primary text-2xl sm:text-3xl">500+</div>
+                        <div class="stat-desc text-xs sm:text-sm">Jan 1st - Feb 1st</div>
                     </div>
 
-                    <div class="stat">
-                        <div class="stat-figure text-secondary">
-                            <i class="fa-solid fa-users text-3xl"></i>
+                    <div class="stat py-2 px-3 sm:py-4 sm:px-6">
+                        <div class="stat-figure text-secondary hidden sm:block">
+                            <i class='bx bx-group text-3xl'></i>
                         </div>
                         <div class="stat-title font-medium">Happy Clients</div>
-                        <div class="stat-value text-secondary">10K+</div>
-                        <div class="stat-desc">↗︎ 400 (22%)</div>
+                        <div class="stat-value text-secondary text-2xl sm:text-3xl">10K+</div>
+                        <div class="stat-desc text-xs sm:text-sm">↗︎ 400 (22%)</div>
                     </div>
 
-                    <div class="stat">
-                        <div class="stat-figure text-accent">
-                            <i class="fa-solid fa-star text-3xl"></i>
+                    <div class="stat py-2 px-3 sm:py-4 sm:px-6">
+                        <div class="stat-figure text-accent hidden sm:block">
+                            <i class='bx bxs-star text-3xl'></i>
                         </div>
                         <div class="stat-title font-medium">Reviews</div>
-                        <div class="stat-value text-accent">4.9</div>
-                        <div class="stat-desc">★★★★★</div>
+                        <div class="stat-value text-accent text-2xl sm:text-3xl">4.9</div>
+                        <div class="stat-desc text-xs sm:text-sm">★★★★★</div>
                     </div>
                 </div>
             </div>
@@ -99,17 +100,17 @@
         </div>
     </div>
 
-    <!-- Search Section - Enhanced with better styling -->
-    <div class="container mx-auto px-4 py-12 -mt-24 relative z-20">
+    <!-- Search Section -->
+    <div class="container mx-auto px-4 py-12 -mt-14 sm:-mt-20 md:-mt-24 relative z-20">
         <div class="card bg-white shadow-2xl rounded-2xl border border-gray-50">
-            <div class="card-body p-8">
-                <h2 class="card-title text-2xl font-bold mb-6 text-neutral">Find Your Perfect Event</h2>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="card-body p-4 sm:p-6 md:p-8">
+                <h2 class="card-title text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-neutral">Find Your Perfect Event</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6">
                     <div class="form-control">
                         <label class="label mb-1">
                             <span class="label-text font-medium">Event Type</span>
                         </label>
-                        <select class="select select-bordered w-full bg-base-100 border-primary focus:border-primary rounded-lg h-14">
+                        <select class="select select-bordered w-full bg-base-100 border-primary focus:border-primary rounded-lg h-12 md:h-14">
                             <option disabled selected>Select type</option>
                             <option>Conference</option>
                             <option>Concert</option>
@@ -122,7 +123,7 @@
                         <label class="label mb-1">
                             <span class="label-text font-medium">Location</span>
                         </label>
-                        <select class="select select-bordered w-full bg-base-100 border-primary focus:border-primary rounded-lg h-14">
+                        <select class="select select-bordered w-full bg-base-100 border-primary focus:border-primary rounded-lg h-12 md:h-14">
                             <option disabled selected>Select location</option>
                             <option>Jakarta</option>
                             <option>Bandung</option>
@@ -136,15 +137,15 @@
                             <span class="label-text font-medium">Date</span>
                         </label>
                         <input type="date"
-                            class="input input-bordered w-full bg-base-100 border-primary focus:border-primary rounded-lg h-14" />
+                            class="input input-bordered w-full bg-base-100 border-primary focus:border-primary rounded-lg h-12 md:h-14" />
                     </div>
                     <div class="form-control">
-                        <label class="label">
-                            <span class="label-text font-medium"></span>
+                        <label class="label mb-1">
+                            <span class="label-text font-medium text-white">searching</span>
                         </label>
                         <div>
-                            <button class="btn bg-primary hover:bg-primary-focus text-white border-none h-14 rounded-lg shadow-md">
-                                <i class="fa-solid fa-magnifying-glass mr-2"></i> Search Events
+                            <button class="btn bg-primary hover:bg-primary-focus text-white border-none h-12 md:h-14 rounded-lg shadow-md w-full">
+                                <i class='bx bx-search-alt-2 text-lg'></i> Search Events
                             </button>
                         </div>
                     </div>
@@ -154,44 +155,44 @@
     </div>
 
     <!-- Sponsors/Brands Section -->
-    <div class="bg-base-200 py-16">
+    <div class="bg-base-200 py-12 sm:py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-neutral">Trusted by Leading Brands</h2>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral">Trusted by Leading Brands</h2>
+            <div class="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-16">
                 <div class="grayscale hover:grayscale-0 transition-all duration-300">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
-                        alt="Google" class="h-12 object-contain" />
+                        alt="Google" class="h-6 sm:h-8 md:h-12 object-contain" />
                 </div>
                 <div class="grayscale hover:grayscale-0 transition-all duration-300">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Slack_Technologies_Logo.svg/2560px-Slack_Technologies_Logo.svg.png"
-                        alt="Slack" class="h-10 object-contain" />
+                        alt="Slack" class="h-5 sm:h-7 md:h-10 object-contain" />
                 </div>
                 <div class="grayscale hover:grayscale-0 transition-all duration-300">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png"
-                        alt="Microsoft" class="h-8 object-contain" />
+                        alt="Microsoft" class="h-4 sm:h-6 md:h-8 object-contain" />
                 </div>
                 <div class="grayscale hover:grayscale-0 transition-all duration-300">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png"
-                        alt="Apple" class="h-12 object-contain" />
+                        alt="Apple" class="h-6 sm:h-8 md:h-12 object-contain" />
                 </div>
                 <div class="grayscale hover:grayscale-0 transition-all duration-300">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Spotify_logo_with_text.svg/2560px-Spotify_logo_with_text.svg.png"
-                        alt="Spotify" class="h-8 object-contain" />
+                        alt="Spotify" class="h-4 sm:h-6 md:h-8 object-contain" />
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Latest Events Section - Updated card sizing -->
-    <div class="container mx-auto px-4 py-16">
-        <div class="flex justify-between items-center mb-12">
-            <h2 class="text-3xl font-bold text-neutral">Latest Events</h2>
+    <!-- Latest Events Section -->
+    <div class="container mx-auto px-4 py-12 sm:py-16">
+        <div class="flex justify-between items-center mb-8 sm:mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-neutral">Latest Events</h2>
             <a href="#" class="btn btn-outline border-primary text-primary hover:bg-primary hover:text-white rounded-full">View
                 All</a>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <!-- Event Card 1 - Resized -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
+            <!-- Event Card 1 -->
             <div class="card bg-white shadow-xl card-hover rounded-xl overflow-hidden">
                 <figure><img
                         src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
@@ -200,11 +201,11 @@
                     <div class="badge bg-secondary text-white border-none mb-2 p-3">Conference</div>
                     <h2 class="card-title text-neutral text-xl">Tech Innovation Summit 2023</h2>
                     <div class="flex items-center gap-2 text-gray-600 mb-2">
-                        <i class="fa-solid fa-calendar-days"></i>
+                        <i class='bx bx-calendar text-lg'></i>
                         <span>March 15, 2023</span>
                     </div>
                     <div class="flex items-center gap-2 text-gray-600 mb-4">
-                        <i class="fa-solid fa-location-dot"></i>
+                        <i class='bx bx-map text-lg'></i>
                         <span>Jakarta Convention Center</span>
                     </div>
                     <p class="text-gray-600">Join the biggest tech conference in Southeast Asia featuring keynotes from
@@ -217,7 +218,7 @@
                 </div>
             </div>
 
-            <!-- Event Card 2 - Resized -->
+            <!-- Event Card 2 -->
             <div class="card bg-white shadow-xl card-hover rounded-xl overflow-hidden">
                 <figure>
                     <img
@@ -227,11 +228,11 @@
                     <div class="badge bg-accent text-white border-none mb-2 p-3">Concert</div>
                     <h2 class="card-title text-neutral text-xl">Summer Music Festival</h2>
                     <div class="flex items-center gap-2 text-gray-600 mb-2">
-                        <i class="fa-solid fa-calendar-days"></i>
+                        <i class='bx bx-calendar text-lg'></i>
                         <span>April 10-12, 2023</span>
                     </div>
                     <div class="flex items-center gap-2 text-gray-600 mb-4">
-                        <i class="fa-solid fa-location-dot"></i>
+                        <i class='bx bx-map text-lg'></i>
                         <span>Bali Beach Resort</span>
                     </div>
                     <p class="text-gray-600">Three days of amazing music performances by top artists in a beautiful
@@ -244,7 +245,7 @@
                 </div>
             </div>
 
-            <!-- Event Card 3 - Resized -->
+            <!-- Event Card 3 -->
             <div class="card bg-white shadow-xl card-hover rounded-xl overflow-hidden">
                 <figure><img
                         src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
@@ -253,11 +254,11 @@
                     <div class="badge bg-primary text-white border-none mb-2 p-3">Workshop</div>
                     <h2 class="card-title text-neutral text-xl">Digital Marketing Masterclass</h2>
                     <div class="flex items-center gap-2 text-gray-600 mb-2">
-                        <i class="fa-solid fa-calendar-days"></i>
+                        <i class='bx bx-calendar text-lg'></i>
                         <span>March 25, 2023</span>
                     </div>
                     <div class="flex items-center gap-2 text-gray-600 mb-4">
-                        <i class="fa-solid fa-location-dot"></i>
+                        <i class='bx bx-map text-lg'></i>
                         <span>Bandung Creative Hub</span>
                     </div>
                     <p class="text-gray-600">Learn advanced digital marketing strategies from industry experts in this
@@ -309,18 +310,18 @@
     </div>
 
     <!-- Testimonials Section -->
-    <div class="container mx-auto px-4 py-16">
-        <h2 class="text-3xl font-bold text-center mb-12 text-neutral">What Our Clients Say</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Testimonial 1 -->
+    <div class="container mx-auto px-4 py-12 sm:py-16">
+        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-neutral">What Our Clients Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <!-- Testimonial -->
             <div class="card bg-white shadow-xl card-hover">
                 <div class="card-body">
                     <div class="flex text-yellow-400 mb-4">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
                     </div>
                     <p class="mb-6 text-gray-600">"Eventify made planning our corporate retreat so easy. The booking
                         process was seamless, and the event exceeded our expectations!"</p>
@@ -338,15 +339,15 @@
                 </div>
             </div>
 
-            <!-- Testimonial 2 -->
+            <!-- Testimonial -->
             <div class="card bg-white shadow-xl card-hover">
                 <div class="card-body">
                     <div class="flex text-yellow-400 mb-4">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
                     </div>
                     <p class="mb-6 text-gray-600">"We booked our wedding through Eventify and couldn't be happier. The
                         venue was perfect, and the staff was incredibly helpful throughout the process."</p>
@@ -364,15 +365,15 @@
                 </div>
             </div>
 
-            <!-- Testimonial 3 -->
+            <!-- Testimonial -->
             <div class="card bg-white shadow-xl card-hover">
                 <div class="card-body">
                     <div class="flex text-yellow-400 mb-4">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
                     </div>
                     <p class="mb-6 text-gray-600">"The conference we attended through Eventify was well-organized and
                         provided great networking opportunities. Will definitely use their platform again!"</p>
@@ -405,7 +406,7 @@
         </div>
     </div>
 
-    <!-- Footer - Improved design -->
+    <!-- Footer -->
     <footer class="bg-neutral text-neutral-content">
         <div class="container mx-auto">
             <div class="footer grid-cols-1 pb-10 pt-20 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -414,16 +415,16 @@
                     <p class="mb-4 max-w-xs">Providing reliable event booking services since 2020. Your one-stop solution for discovering and booking amazing events.</p>
                     <div class="flex gap-4">
                         <a class="btn btn-circle btn-ghost hover:bg-white/10">
-                            <i class="fa-brands fa-twitter text-xl"></i>
+                            <i class='bx bxl-twitter text-xl'></i>
                         </a>
                         <a class="btn btn-circle btn-ghost hover:bg-white/10">
-                            <i class="fa-brands fa-facebook text-xl"></i>
+                            <i class='bx bxl-facebook text-xl'></i>
                         </a>
                         <a class="btn btn-circle btn-ghost hover:bg-white/10">
-                            <i class="fa-brands fa-instagram text-xl"></i>
+                            <i class='bx bxl-instagram text-xl'></i>
                         </a>
                         <a class="btn btn-circle btn-ghost hover:bg-white/10">
-                            <i class="fa-brands fa-linkedin text-xl"></i>
+                            <i class='bx bxl-linkedin text-xl'></i>
                         </a>
                     </div>
                 </div>
@@ -472,6 +473,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>

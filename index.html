@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -7,10 +7,447 @@
     <link href="./assets/css/style.css" rel="stylesheet" />
 </head>
 
-<body>
-    <h1 class="text-3xl text-center text-indigo-600 font-bold underline">
-        Hello world!
-    </h1>
+<body class="bg-base-100">
+    <!-- Navigation Bar -->
+    <div class="navbar bg-white shadow-md sticky top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a class="font-medium">Home</a></li>
+                    <li><a class="font-medium">Events</a></li>
+                    <li><a class="font-medium">About</a></li>
+                    <li><a class="font-medium">Galleries</a></li>
+                </ul>
+            </div>
+            <a class="btn btn-ghost text-xl">
+                <span class="text-primary font-bold">Event</span><span class="text-secondary font-bold">Hub</span>
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a class="font-medium">Home</a></li>
+                <li><a class="font-medium">Events</a></li>
+                <li><a class="font-medium">About</a></li>
+                <li><a class="font-medium">Galleries</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn bg-primary hover:bg-primary-focus text-white border-none">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero min-h-[80vh] vibrant-gradient">
+        <div class="hero-content flex-col lg:flex-row-reverse gap-8">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                class="max-w-sm rounded-lg shadow-2xl" alt="Event image" />
+            <div>
+                <h1 class="text-5xl font-bold text-white">Find & Book Amazing Events</h1>
+                <p class="py-6 text-lg text-white">Discover and book the perfect events for any occasion. From
+                    conferences to concerts, workshops to weddings, we've got you covered.</p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="btn bg-white hover:bg-gray-100 text-primary border-none">Explore Events</button>
+                    <button class="btn bg-secondary hover:bg-secondary-focus text-white border-none">How It
+                        Works</button>
+                </div>
+                <div class="stats shadow mt-8 bg-white">
+                    <div class="stat">
+                        <div class="stat-figure text-primary">
+                            <i class="fa-solid fa-calendar-check text-3xl"></i>
+                        </div>
+                        <div class="stat-title">Events</div>
+                        <div class="stat-value text-primary">500+</div>
+                        <div class="stat-desc">Jan 1st - Feb 1st</div>
+                    </div>
+
+                    <div class="stat">
+                        <div class="stat-figure text-secondary">
+                            <i class="fa-solid fa-users text-3xl"></i>
+                        </div>
+                        <div class="stat-title">Happy Clients</div>
+                        <div class="stat-value text-secondary">10K+</div>
+                        <div class="stat-desc">↗︎ 400 (22%)</div>
+                    </div>
+
+                    <div class="stat">
+                        <div class="stat-figure text-accent">
+                            <i class="fa-solid fa-star text-3xl"></i>
+                        </div>
+                        <div class="stat-title">Reviews</div>
+                        <div class="stat-value text-accent">4.9</div>
+                        <div class="stat-desc">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Section -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="card bg-white shadow-xl">
+            <div class="card-body">
+                <h2 class="card-title text-2xl mb-4 text-neutral">Find Your Perfect Event</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Event Type</span>
+                        </label>
+                        <select class="select select-bordered w-full bg-base-100 border-primary focus:border-primary">
+                            <option disabled selected>Select type</option>
+                            <option>Conference</option>
+                            <option>Concert</option>
+                            <option>Workshop</option>
+                            <option>Wedding</option>
+                            <option>Corporate</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Location</span>
+                        </label>
+                        <select class="select select-bordered w-full bg-base-100 border-primary focus:border-primary">
+                            <option disabled selected>Select location</option>
+                            <option>Jakarta</option>
+                            <option>Bandung</option>
+                            <option>Surabaya</option>
+                            <option>Bali</option>
+                            <option>Yogyakarta</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Date</span>
+                        </label>
+                        <input type="date"
+                            class="input input-bordered w-full bg-base-100 border-primary focus:border-primary" />
+                    </div>
+                    <div class="form-control mt-8">
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none">Search
+                            Events</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sponsors/Brands Section -->
+    <div class="bg-base-200 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-neutral">Trusted by Leading Brands</h2>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+                        alt="Google" class="h-12 object-contain" />
+                </div>
+                <div class="grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Slack_Technologies_Logo.svg/2560px-Slack_Technologies_Logo.svg.png"
+                        alt="Slack" class="h-10 object-contain" />
+                </div>
+                <div class="grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png"
+                        alt="Microsoft" class="h-8 object-contain" />
+                </div>
+                <div class="grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png"
+                        alt="Apple" class="h-12 object-contain" />
+                </div>
+                <div class="grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Spotify_logo_with_text.svg/2560px-Spotify_logo_with_text.svg.png"
+                        alt="Spotify" class="h-8 object-contain" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest Events Section -->
+    <div class="container mx-auto px-4 py-16">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-3xl font-bold text-neutral">Latest Events</h2>
+            <a href="#" class="btn btn-outline border-primary text-primary hover:bg-primary hover:text-white">View
+                All</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Event Card 1 -->
+            <div class="card bg-white shadow-xl card-hover">
+                <figure><img
+                        src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="Tech Conference" class="h-48 w-full object-cover" /></figure>
+                <div class="card-body">
+                    <div class="badge bg-secondary text-white border-none mb-2">Conference</div>
+                    <h2 class="card-title text-neutral">Tech Innovation Summit 2023</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>March 15, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Jakarta Convention Center</span>
+                    </div>
+                    <p class="text-gray-600">Join the biggest tech conference in Southeast Asia featuring keynotes from
+                        industry leaders.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$299</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="card bg-white shadow-xl card-hover">
+                <figure><img
+                        src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="Music Festival" class="h-48 w-full object-cover" /></figure>
+                <div class="card-body">
+                    <div class="badge bg-accent text-white border-none mb-2">Concert</div>
+                    <h2 class="card-title text-neutral">Summer Music Festival</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>April 10-12, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Bali Beach Resort</span>
+                    </div>
+                    <p class="text-gray-600">Three days of amazing music performances by top artists in a beautiful
+                        beach setting.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$149</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="card bg-white shadow-xl card-hover">
+                <figure><img
+                        src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+                        alt="Workshop" class="h-48 w-full object-cover" /></figure>
+                <div class="card-body">
+                    <div class="badge bg-primary text-white border-none mb-2">Workshop</div>
+                    <h2 class="card-title text-neutral">Digital Marketing Masterclass</h2>
+                    <div class="flex items-center gap-2 text-gray-600 mb-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>March 25, 2023</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 mb-4">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Bandung Creative Hub</span>
+                    </div>
+                    <p class="text-gray-600">Learn advanced digital marketing strategies from industry experts in this
+                        hands-on workshop.</p>
+                    <div class="card-actions justify-between items-center mt-4">
+                        <span class="text-lg font-bold text-primary">$99</span>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Event -->
+    <div class="vibrant-gradient-dark text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4">Featured Event: New Year's Gala</h2>
+                    <p class="mb-6">Ring in the new year with style at our exclusive New Year's Gala. Enjoy fine dining,
+                        live entertainment, and a spectacular fireworks display at midnight.</p>
+                    <div class="flex flex-wrap gap-4 mb-6">
+                        <div class="bg-white/20 p-3 rounded-lg backdrop-blur-sm">
+                            <div class="text-2xl font-bold">15</div>
+                            <div>Days</div>
+                        </div>
+                        <div class="bg-white/20 p-3 rounded-lg backdrop-blur-sm">
+                            <div class="text-2xl font-bold">08</div>
+                            <div>Hours</div>
+                        </div>
+                        <div class="bg-white/20 p-3 rounded-lg backdrop-blur-sm">
+                            <div class="text-2xl font-bold">45</div>
+                            <div>Minutes</div>
+                        </div>
+                        <div class="bg-white/20 p-3 rounded-lg backdrop-blur-sm">
+                            <div class="text-2xl font-bold">30</div>
+                            <div>Seconds</div>
+                        </div>
+                    </div>
+                    <button class="btn bg-white text-primary hover:bg-gray-200">Reserve Your Spot</button>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                        alt="New Year's Gala" class="rounded-lg shadow-lg" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12 text-neutral">What Our Clients Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="card bg-white shadow-xl card-hover">
+                <div class="card-body">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="mb-6 text-gray-600">"EventHub made planning our corporate retreat so easy. The booking
+                        process was seamless, and the event exceeded our expectations!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="avatar">
+                            <div class="w-12 rounded-full ring ring-primary ring-offset-2">
+                                <img src="https://i.pravatar.cc/150?img=1" alt="Client" />
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-neutral">Sarah Johnson</h3>
+                            <p class="text-sm text-gray-600">Marketing Director, TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="card bg-white shadow-xl card-hover">
+                <div class="card-body">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="mb-6 text-gray-600">"We booked our wedding through EventHub and couldn't be happier. The
+                        venue was perfect, and the staff was incredibly helpful throughout the process."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="avatar">
+                            <div class="w-12 rounded-full ring ring-secondary ring-offset-2">
+                                <img src="https://i.pravatar.cc/150?img=2" alt="Client" />
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-neutral">Michael & Lisa Chen</h3>
+                            <p class="text-sm text-gray-600">Newlyweds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="card bg-white shadow-xl card-hover">
+                <div class="card-body">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="mb-6 text-gray-600">"The conference we attended through EventHub was well-organized and
+                        provided great networking opportunities. Will definitely use their platform again!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="avatar">
+                            <div class="w-12 rounded-full ring ring-accent ring-offset-2">
+                                <img src="https://i.pravatar.cc/150?img=3" alt="Client" />
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-neutral">David Wijaya</h3>
+                            <p class="text-sm text-gray-600">CEO, StartupX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-base-200 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-neutral">Ready to Host Your Next Event?</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto text-gray-600">Join thousands of satisfied customers who have
+                successfully planned and executed their events with EventHub.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="btn bg-primary hover:bg-primary-focus text-white border-none">Get Started</button>
+                <button class="btn bg-secondary hover:bg-secondary-focus text-white border-none">Contact Sales</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer flex justify-between p-10 bg-neutral text-neutral-content">
+        <div>
+            <span class="footer-title">Services</span>
+            <a class="link link-hover">Event Planning</a>
+            <a class="link link-hover">Venue Booking</a>
+            <a class="link link-hover">Catering</a>
+            <a class="link link-hover">Entertainment</a>
+        </div>
+        <div>
+            <span class="footer-title">Company</span>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+        </div>
+        <div>
+            <span class="footer-title">Legal</span>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+        </div>
+        <div>
+            <span class="footer-title">Newsletter</span>
+            <div class="form-control w-80">
+                <label class="label">
+                    <span class="label-text text-neutral-content">Enter your email address</span>
+                </label>
+                <div class="relative">
+                    <input type="text" placeholder="username@site.com"
+                        class="input input-bordered w-full pr-16 bg-neutral-focus text-neutral-content" />
+                    <button
+                        class="btn bg-secondary hover:bg-secondary-focus border-none absolute top-0 right-0 rounded-l-none text-white">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer px-10 py-4 border-t bg-neutral text-neutral-content border-base-300">
+        <div class="items-center grid-flow-col">
+            <a class="text-xl font-bold">Event<span class="text-secondary">Hub</span></a>
+            <p>EventHub Ltd. <br />Providing reliable event booking since 2020</p>
+        </div>
+        <div class="md:place-self-center md:justify-self-end">
+            <div class="grid grid-flow-col gap-4">
+                <a class="btn btn-ghost btn-circle">
+                    <i class="fa-brands fa-twitter text-xl"></i>
+                </a>
+                <a class="btn btn-ghost btn-circle">
+                    <i class="fa-brands fa-youtube text-xl"></i>
+                </a>
+                <a class="btn btn-ghost btn-circle">
+                    <i class="fa-brands fa-facebook text-xl"></i>
+                </a>
+                <a class="btn btn-ghost btn-circle">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

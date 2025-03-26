@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Additional custom styles */
+.vibrant-gradient {
+  background: linear-gradient(135deg, #c084fc 0%, #f472b6 50%, #fbbf24 100%);
+}
+.vibrant-gradient-dark {
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+}
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+}

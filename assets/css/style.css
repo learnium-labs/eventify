@@ -2595,6 +2595,11 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .-mt-0 {
   margin-top: -0px;
 }
@@ -2759,6 +2764,10 @@ video {
 
 .h-auto {
   height: auto;
+}
+
+.h-px {
+  height: 1px;
 }
 
 .min-h-8 {
@@ -3222,6 +3231,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .text-2xl {

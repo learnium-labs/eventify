@@ -264,22 +264,49 @@
                     <div class="card-body">
                         <h2 class="text-2xl font-bold mb-6 text-neutral">Book Your Ticket</h2>
 
-                        <!-- Price Info -->
-                        <div class="flex flex-col gap-1 mb-4">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gray-600">Original Price</span>
-                                <span class="text-gray-600 line-through">$399</span>
+                        <!-- Ticket Types -->
+                        <div class="mb-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex flex-col">
+                                    <span class="font-bold text-neutral">Early Bird</span>
+                                    <p class="text-gray-500 text-sm">Limited availability</p>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-gray-600 line-through text-sm block">Rp3.999.000</span>
+                                    <span class="font-bold text-primary">Rp2.999.000</span>
+                                </div>
                             </div>
-                            <div class="flex items-center justify-between">
-                                <span class="font-medium flex items-center gap-2">
-                                    Discount
-                                    <div class="badge bg-secondary text-white border-none">25% OFF</div>
-                                </span>
-                                <span class="text-secondary font-medium">-$100</span>
+
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex flex-col">
+                                    <span class="font-bold text-neutral">Regular</span>
+                                    <p class="text-gray-500 text-sm">Most popular</p>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-bold text-primary">Rp4.599.000</span>
+                                </div>
                             </div>
-                            <div class="flex items-center justify-between mt-2">
-                                <span class="font-bold text-xl">Price</span>
-                                <span class="font-bold text-primary text-2xl">$299</span>
+
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex flex-col">
+                                    <span class="font-bold text-neutral">VIP Access</span>
+                                    <p class="text-gray-500 text-sm">Special perks included</p>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-bold text-primary">Rp8.999.000</span>
+                                </div>
+                            </div>
+
+                            <div class="w-full h-px bg-gray-200 my-4"></div>
+
+                            <div class="flex items-center justify-between">
+                                <div class="flex flex-col">
+                                    <span class="font-bold text-neutral">Student Pass</span>
+                                    <p class="text-gray-500 text-sm">Valid student ID required</p>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-bold text-primary">Rp1.999.000</span>
+                                </div>
                             </div>
                         </div>
 
@@ -301,24 +328,8 @@
                             <p class="text-sm text-gray-500 mt-1">78% sold out - Hurry up!</p>
                         </div>
 
-                        <!-- Ticket Selection -->
-                        <div class="form-control mb-6">
-                            <label class="label mb-1">
-                                <span class="label-text font-medium">Number of Tickets</span>
-                            </label>
-                            <div class="flex">
-                                <button class="btn btn-square border-gray-300 bg-white hover:bg-gray-100 text-gray-700">
-                                    <i class='bx bx-minus'></i>
-                                </button>
-                                <input type="number" class="input input-bordered w-full text-center mx-2" value="1" min="1" max="10">
-                                <button class="btn btn-square border-gray-300 bg-white hover:bg-gray-100 text-gray-700">
-                                    <i class='bx bx-plus'></i>
-                                </button>
-                            </div>
-                        </div>
-
                         <!-- Booking Options -->
-                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none w-full mb-2">Book Now</button>
+                        <button class="btn bg-primary hover:bg-primary-focus text-white border-none w-full mb-2">Proceed to Checkout</button>
                         <button class="btn btn-outline btn-primary w-full">Add to Wishlist</button>
 
                         <!-- Additional Info -->
@@ -366,7 +377,7 @@
                         </div>
                         <p class="text-gray-600 text-sm mb-3 line-clamp-2">Join web developers and designers for a day of learning, networking, and exploring the latest web technologies.</p>
                         <div class="card-actions justify-between items-center mt-auto">
-                            <span class="text-base font-bold text-primary">$179</span>
+                            <span class="text-base font-bold text-primary">Rp1.790.000</span>
                             <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">View</button>
                         </div>
                     </div>
@@ -390,7 +401,10 @@
                         </div>
                         <p class="text-gray-600 text-sm mb-3 line-clamp-2">Hands-on workshop teaching practical AI and ML skills with real-world applications. Perfect for developers and data scientists.</p>
                         <div class="card-actions justify-between items-center mt-auto">
-                            <span class="text-base font-bold text-primary">$149</span>
+                            <div>
+                                <span class="text-gray-600 text-sm line-through">Rp1.950.000</span>
+                                <span class="text-base font-bold text-primary block">Rp1.490.000</span>
+                            </div>
                             <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">View</button>
                         </div>
                     </div>
@@ -414,7 +428,7 @@
                         </div>
                         <p class="text-gray-600 text-sm mb-3 line-clamp-2">Discover innovative startups and connect with investors and entrepreneurs. Features pitching competitions and networking sessions.</p>
                         <div class="card-actions justify-between items-center mt-auto">
-                            <span class="text-base font-bold text-primary">$89</span>
+                            <span class="text-base font-bold text-primary">Gratis</span>
                             <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">View</button>
                         </div>
                     </div>
@@ -438,7 +452,7 @@
                         </div>
                         <p class="text-gray-600 text-sm mb-3 line-clamp-2">Expert sessions on the latest cybersecurity threats and solutions. Learn best practices for protecting your organization.</p>
                         <div class="card-actions justify-between items-center mt-auto">
-                            <span class="text-base font-bold text-primary">$199</span>
+                            <span class="text-base font-bold text-primary">Rp1.990.000</span>
                             <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">View</button>
                         </div>
                     </div>

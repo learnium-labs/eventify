@@ -51,7 +51,7 @@
     <!-- Event Header -->
     <div class="bg-gradient-to-r from-primary to-secondary py-12 md:py-16">
         <div class="container mx-auto px-4">
-            <div class="flex items-center gap-2 text-white/80 mb-4">
+            <div class="flex items-center flex-wrap gap-2 text-white/80 mb-4">
                 <a href="../index.html" class="hover:text-white">Home</a>
                 <i class='bx bx-chevron-right'></i>
                 <a href="./events.html" class="hover:text-white">Events</a>
@@ -272,8 +272,8 @@
                                     <p class="text-gray-500 text-sm">Limited availability</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="text-gray-600 line-through text-sm block">Rp3.999.000</span>
-                                    <span class="font-bold text-primary">Rp2.999.000</span>
+                                    <span class="text-gray-600 line-through text-sm block">Rp 3.999.000</span>
+                                    <span class="font-bold text-primary">Rp 2.999.000</span>
                                 </div>
                             </div>
 
@@ -283,7 +283,7 @@
                                     <p class="text-gray-500 text-sm">Most popular</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="font-bold text-primary">Rp4.599.000</span>
+                                    <span class="font-bold text-primary">Rp 4.599.000</span>
                                 </div>
                             </div>
 
@@ -293,7 +293,7 @@
                                     <p class="text-gray-500 text-sm">Special perks included</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="font-bold text-primary">Rp8.999.000</span>
+                                    <span class="font-bold text-primary">Rp 8.999.000</span>
                                 </div>
                             </div>
 
@@ -305,7 +305,7 @@
                                     <p class="text-gray-500 text-sm">Valid student ID required</p>
                                 </div>
                                 <div class="text-right">
-                                    <span class="font-bold text-primary">Rp1.999.000</span>
+                                    <span class="font-bold text-primary">Rp 1.999.000</span>
                                 </div>
                             </div>
                         </div>
@@ -361,12 +361,18 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Related Event Card 1 -->
                 <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
-                    <figure><img
-                            src="https://images.unsplash.com/photo-1559223607-b4d0555ae227?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                            alt="Developer Conference" class="h-48 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                    <a href="./event-detail.html">
+                        <figure>
+                            <img
+                                src="https://images.unsplash.com/photo-1559223607-b4d0555ae227?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                alt="Developer Conference" class="h-48 w-full object-cover transition-transform duration-500 hover:scale-105" />
+                        </figure>
+                    </a>
                     <div class="card-body p-4">
                         <div class="badge bg-secondary text-white border-none mb-2">Conference</div>
-                        <h3 class="card-title text-neutral text-lg line-clamp-2">Web Developer Summit 2023: Advanced Techniques for Modern Web Applications</h3>
+                        <a href="./event-detail.html" class="hover:text-primary transition-colors">
+                            <h3 class="card-title text-neutral text-lg line-clamp-2">Web Developer Summit 2023: Advanced Techniques for Modern Web Applications</h3>
+                        </a>
                         <div class="flex items-center gap-2 text-gray-600 text-sm mb-1">
                             <i class='bx bx-calendar text-base'></i>
                             <span>April 8, 2023</span>
@@ -376,21 +382,26 @@
                             <span>Bandung, Indonesia</span>
                         </div>
                         <p class="text-gray-600 text-sm mb-3 line-clamp-2">Join web developers and designers for a day of learning, networking, and exploring the latest web technologies.</p>
-                        <div class="card-actions justify-between items-center mt-auto">
-                            <span class="text-base font-bold text-primary">Rp1.790.000</span>
-                            <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">View</button>
+                        <div class="flex items-center justify-start">
+                            <span class="text-base font-bold text-primary">Rp 1.790.000</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Related Event Card 2 -->
                 <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
-                    <figure><img
-                            src="https://images.unsplash.com/photo-1528901166007-3784c7dd3653?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                            alt="AI Workshop" class="h-48 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                    <a href="./event-detail.html">
+                        <figure>
+                            <img
+                                src="https://images.unsplash.com/photo-1528901166007-3784c7dd3653?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                alt="AI Workshop" class="h-48 w-full object-cover transition-transform duration-500 hover:scale-105" />
+                        </figure>
+                    </a>
                     <div class="card-body p-4">
                         <div class="badge bg-primary text-white border-none mb-2">Workshop</div>
-                        <h3 class="card-title text-neutral text-lg line-clamp-2">AI & Machine Learning Workshop: Practical Approaches to Building Intelligent Systems</h3>
+                        <a href="./event-detail.html" class="hover:text-primary transition-colors">
+                            <h3 class="card-title text-neutral text-lg line-clamp-2">AI & Machine Learning Workshop: Practical Approaches to Building Intelligent Systems</h3>
+                        </a>
                         <div class="flex items-center gap-2 text-gray-600 text-sm mb-1">
                             <i class='bx bx-calendar text-base'></i>
                             <span>March 28, 2023</span>
@@ -400,24 +411,27 @@
                             <span>Jakarta, Indonesia</span>
                         </div>
                         <p class="text-gray-600 text-sm mb-3 line-clamp-2">Hands-on workshop teaching practical AI and ML skills with real-world applications. Perfect for developers and data scientists.</p>
-                        <div class="card-actions justify-between items-center mt-auto">
-                            <div>
-                                <span class="text-gray-600 text-sm line-through">Rp1.950.000</span>
-                                <span class="text-base font-bold text-primary block">Rp1.490.000</span>
-                            </div>
-                            <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">View</button>
+                        <div class="flex items-center justify-start gap-2">
+                            <span class="text-gray-600 text-sm line-through">Rp 1.950.000</span>
+                            <span class="text-base font-bold text-primary">Rp 1.490.000</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Related Event Card 3 -->
                 <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
-                    <figure><img
-                            src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                            alt="Startup Expo" class="h-48 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                    <a href="./event-detail.html">
+                        <figure>
+                            <img
+                                src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                alt="Startup Expo" class="h-48 w-full object-cover transition-transform duration-500 hover:scale-105" />
+                        </figure>
+                    </a>
                     <div class="card-body p-4">
                         <div class="badge bg-accent text-white border-none mb-2">Expo</div>
-                        <h3 class="card-title text-neutral text-lg line-clamp-2">Startup Innovation Expo: Connecting Entrepreneurs with Investors and Industry Leaders</h3>
+                        <a href="./event-detail.html" class="hover:text-primary transition-colors">
+                            <h3 class="card-title text-neutral text-lg line-clamp-2">Startup Innovation Expo: Connecting Entrepreneurs with Investors and Industry Leaders</h3>
+                        </a>
                         <div class="flex items-center gap-2 text-gray-600 text-sm mb-1">
                             <i class='bx bx-calendar text-base'></i>
                             <span>May 12-13, 2023</span>
@@ -427,21 +441,26 @@
                             <span>Jakarta, Indonesia</span>
                         </div>
                         <p class="text-gray-600 text-sm mb-3 line-clamp-2">Discover innovative startups and connect with investors and entrepreneurs. Features pitching competitions and networking sessions.</p>
-                        <div class="card-actions justify-between items-center mt-auto">
+                        <div class="flex items-center justify-start">
                             <span class="text-base font-bold text-primary">Gratis</span>
-                            <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">View</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Related Event Card 4 -->
                 <div class="card bg-white shadow card-hover rounded-xl overflow-hidden">
-                    <figure><img
-                            src="https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1547&q=80"
-                            alt="Cybersecurity Summit" class="h-48 w-full object-cover transition-transform duration-500 hover:scale-105" /></figure>
+                    <a href="./event-detail.html">
+                        <figure>
+                            <img
+                                src="https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1547&q=80"
+                                alt="Cybersecurity Summit" class="h-48 w-full object-cover transition-transform duration-500 hover:scale-105" />
+                        </figure>
+                    </a>
                     <div class="card-body p-4">
                         <div class="badge bg-secondary text-white border-none mb-2">Conference</div>
-                        <h3 class="card-title text-neutral text-lg line-clamp-2">Cybersecurity Summit: Strategies for Protecting Organizations in an Evolving Threat Landscape</h3>
+                        <a href="./event-detail.html" class="hover:text-primary transition-colors">
+                            <h3 class="card-title text-neutral text-lg line-clamp-2">Cybersecurity Summit: Strategies for Protecting Organizations in an Evolving Threat Landscape</h3>
+                        </a>
                         <div class="flex items-center gap-2 text-gray-600 text-sm mb-1">
                             <i class='bx bx-calendar text-base'></i>
                             <span>April 22, 2023</span>
@@ -451,9 +470,8 @@
                             <span>Surabaya, Indonesia</span>
                         </div>
                         <p class="text-gray-600 text-sm mb-3 line-clamp-2">Expert sessions on the latest cybersecurity threats and solutions. Learn best practices for protecting your organization.</p>
-                        <div class="card-actions justify-between items-center mt-auto">
-                            <span class="text-base font-bold text-primary">Rp1.990.000</span>
-                            <button class="btn bg-primary hover:bg-primary-focus text-white border-none btn-sm rounded-full">View</button>
+                        <div class="flex items-center justify-start">
+                            <span class="text-base font-bold text-primary">Rp 1.990.000</span>
                         </div>
                     </div>
                 </div>

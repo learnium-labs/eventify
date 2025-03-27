@@ -2821,6 +2821,10 @@ video {
   max-width: 20rem;
 }
 
+.max-w-4xl {
+  max-width: 56rem;
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -3275,6 +3279,26 @@ video {
 
 .not-italic {
   font-style: normal;
+}
+
+.leading-snug {
+  line-height: 1.375;
+}
+
+.leading-5 {
+  line-height: 1.25rem;
+}
+
+.leading-8 {
+  line-height: 2rem;
+}
+
+.leading-10 {
+  line-height: 2.5rem;
+}
+
+.tracking-tighter {
+  letter-spacing: -0.05em;
 }
 
 .text-accent {

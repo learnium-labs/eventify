@@ -1,0 +1,643 @@
+<!doctype html>
+<html data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Checkout - Tech Innovation Summit 2023 - Eventify</title>
+</head>
+
+<body class="bg-base-100">
+    <!-- Navigation Bar -->
+    <div class="navbar bg-white shadow-sm sticky top-0 z-50 md:px-14">
+        <!-- Logo and Hamburger Menu -->
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden ps-0 pe-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="../index.html" class="font-medium">Home</a></li>
+                    <li><a href="./events.html" class="font-medium text-primary">Events</a></li>
+                    <li><a href="./about.html" class="font-medium">About</a></li>
+                    <li><a href="./contact.html" class="font-medium">Contact</a></li>
+                </ul>
+            </div>
+            <a href="../index.html" class="btn btn-ghost text-xl px-0">
+                <span class="text-primary font-bold">Event<span class="text-secondary font-bold">ify</span></span>
+            </a>
+        </div>
+        <!-- Centered Menu -->
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu flex gap-x-8 menu-horizontal px-1">
+                <li><a href="../index.html" class="font-medium">Home</a></li>
+                <li><a href="./events.html" class="font-medium text-primary">Events</a></li>
+                <li><a href="./about.html" class="font-medium">About</a></li>
+                <li><a href="./contact.html" class="font-medium">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn bg-primary text-balance hover:bg-primary-focus text-white border-none rounded-full">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Page Header with Steps -->
+    <div class="bg-gradient-to-r from-primary to-secondary py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center flex-wrap gap-2 text-white/80 mb-4">
+                <a href="../index.html" class="hover:text-white">Home</a>
+                <i class='bx bx-chevron-right'></i>
+                <a href="./events.html" class="hover:text-white">Events</a>
+                <i class='bx bx-chevron-right'></i>
+                <a href="./event-detail.html" class="hover:text-white">Tech Innovation Summit 2023</a>
+                <i class='bx bx-chevron-right'></i>
+                <span class="text-white">Checkout</span>
+            </div>
+            <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mt-12 mb-8 text-center">Complete Your Booking</h1>
+
+            <!-- Checkout Steps -->
+            <div class="flex justify-center">
+                <ul class="steps steps-horizontal w-full max-w-2xl">
+                    <li class="step step-primary text-slate-100">Select Tickets</li>
+                    <li class="step text-white">Payment</li>
+                    <li class="step text-white">Confirmation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <!-- Left Column - Ticket Selection -->
+            <div class="lg:col-span-2">
+                <!-- Event Information Card -->
+                <div class="card bg-white shadow mb-8">
+                    <div class="card-body">
+                        <div class="flex items-start gap-6">
+                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                 alt="Tech Innovation Summit"
+                                 class="w-24 h-24 object-cover rounded-lg flex-shrink-0" />
+                            <div>
+                                <span class="badge badge-sm bg-secondary text-white border-none mb-2">Conference</span>
+                                <h2 class="text-xl font-bold text-neutral">Tech Innovation Summit 2023</h2>
+                                <div class="flex flex-wrap gap-4 mt-2 text-sm text-gray-600">
+                                    <div class="flex items-center gap-1">
+                                        <i class='bx bx-calendar'></i>
+                                        <span>March 15-16, 2023</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i class='bx bx-time'></i>
+                                        <span>09:00 AM - 05:00 PM</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i class='bx bx-map'></i>
+                                        <span>Jakarta Convention Center</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ticket Selection Sections -->
+                <div id="ticketSections">
+                    <!-- Ticket Section 1 -->
+                    <div class="card bg-white shadow mb-6 ticket-section">
+                        <div class="card-body">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-lg font-bold text-neutral">Ticket #1</h3>
+                                <button class="btn btn-sm btn-circle btn-ghost remove-section" style="display: none;">
+                                    <i class='bx bx-x text-lg'></i>
+                                </button>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                                <div class="form-control">
+                                    <label class="label mb-1">
+                                        <span class="label-text font-medium">Ticket Type</span>
+                                    </label>
+                                    <select class="select select-bordered w-full rounded-lg ticket-type">
+                                        <option value="" disabled selected>Select ticket type</option>
+                                        <option value="early-bird" data-price="2999000" data-original="3999000" data-stock="15">Early Bird (15 left) - Rp 2.999.000</option>
+                                        <option value="regular" data-price="4599000" data-stock="25">Regular (25 left) - Rp 4.599.000</option>
+                                        <option value="vip" data-price="8999000" data-stock="5">VIP Access (5 left) - Rp 8.999.000</option>
+                                        <option value="student" data-price="1999000" data-stock="10">Student Pass (10 left) - Rp 1.999.000</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-control">
+                                    <label class="label mb-1">
+                                        <span class="label-text font-medium">Quantity</span>
+                                    </label>
+                                    <div class="flex items-center">
+                                        <button class="btn btn-sm btn-square bg-base-200 border-none text-neutral hover:bg-base-300 quantity-dec">
+                                            <i class='bx bx-minus'></i>
+                                        </button>
+                                        <input type="number" min="1" max="10" value="1" class="input input-bordered w-full rounded-lg text-center quantity" />
+                                        <button class="btn btn-sm btn-square bg-base-200 border-none text-neutral hover:bg-base-300 quantity-inc">
+                                            <i class='bx bx-plus'></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ticket-details hidden">
+                                <div class="bg-base-200 p-4 rounded-lg">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="font-medium text-neutral">Ticket Information</span>
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-sm text-gray-600">Available: </span>
+                                            <span class="stock-number font-medium text-primary">25</span>
+                                        </div>
+                                    </div>
+                                    <div class="divider my-2"></div>
+                                    <div class="flex justify-between items-center">
+                                        <div>
+                                            <span class="text-sm text-neutral subtotal-label">1 × Regular Ticket</span>
+                                            <div class="original-price hidden">
+                                                <span class="text-xs text-gray-500 line-through original-price-value"></span>
+                                            </div>
+                                        </div>
+                                        <div class="text-right">
+                                            <span class="font-bold text-primary subtotal">Rp 4.599.000</span>
+                                            <div class="discount-amount hidden">
+                                                <span class="text-xs text-green-600 discount-value"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add More Tickets Button -->
+                <div class="flex justify-center mb-8">
+                    <button id="addTicketBtn" class="btn btn-outline btn-primary gap-2 rounded-full">
+                        <i class='bx bx-plus-circle'></i>
+                        Add Another Ticket
+                    </button>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="card bg-white shadow mb-8">
+                    <div class="card-body">
+                        <h3 class="text-lg font-bold text-neutral mb-4">Additional Information</h3>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="form-control">
+                                <label class="label mb-1">
+                                    <span class="label-text font-medium">Full Name</span>
+                                </label>
+                                <input type="text" placeholder="Enter your full name" class="input input-bordered w-full rounded-lg" />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="label mb-1">
+                                    <span class="label-text font-medium">Email</span>
+                                </label>
+                                <input type="email" placeholder="Enter your email" class="input input-bordered w-full rounded-lg" />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="label mb-1">
+                                    <span class="label-text font-medium">Phone Number</span>
+                                </label>
+                                <input type="tel" placeholder="Enter your phone number" class="input input-bordered w-full rounded-lg" />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="label mb-1">
+                                    <span class="label-text font-medium">Special Requests ( Optional )</span>
+                                </label>
+                                <textarea class="textarea textarea-bordered rounded-lg"
+                                    placeholder="Any dietary restrictions, accessibility needs, or other requests"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Order Summary -->
+            <div>
+                <div class="card bg-white shadow sticky top-24">
+                    <div class="card-body">
+                        <h3 class="text-xl font-bold text-neutral mb-4">Order Summary</h3>
+
+                        <!-- Ticket Summary - Will be populated dynamically -->
+                        <div id="ticketSummary" class="mb-6">
+                            <div class="text-sm text-gray-500 mb-2">No tickets selected yet</div>
+                        </div>
+
+                        <div class="divider my-2"></div>
+
+                        <!-- Price Calculation -->
+                        <div class="space-y-3 mb-6">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Subtotal</span>
+                                <span id="subtotalAmount" class="font-medium">Rp 0</span>
+                            </div>
+
+                            <div id="discountRow" class="flex justify-between items-center hidden">
+                                <span class="text-gray-600">Discount</span>
+                                <span id="discountAmount" class="font-medium text-green-600">-Rp 0</span>
+                            </div>
+
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Service Fee</span>
+                                <span id="serviceFeeAmount" class="font-medium">Rp 0</span>
+                            </div>
+
+                            <div class="flex justify-between items-center text-lg font-bold">
+                                <span class="text-neutral">Total</span>
+                                <span id="totalAmount" class="text-primary">Rp 0</span>
+                            </div>
+                        </div>
+
+                        <!-- Continue Button -->
+                        <a href="./payment.html" id="continueBtn" class="btn bg-primary hover:bg-primary-focus text-white border-none w-full mb-4">
+                            Continue to Payment
+                        </a>
+
+                        <!-- Policy Notes -->
+                        <div class="text-xs text-gray-500 space-y-2">
+                            <p class="flex items-start gap-2">
+                                <i class='bx bx-check-shield text-primary text-lg flex-shrink-0'></i>
+                                <span>Secure payment processing with end-to-end encryption</span>
+                            </p>
+                            <p class="flex items-start gap-2">
+                                <i class='bx bx-calendar-alt text-primary text-lg flex-shrink-0'></i>
+                                <span>Full refund available up to 7 days before the event date</span>
+                            </p>
+                            <p class="flex items-start gap-2">
+                                <i class='bx bx-id-card text-primary text-lg flex-shrink-0'></i>
+                                <span>Student tickets require valid student ID verification</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Events -->
+    <!-- End Related Events -->
+
+    <!-- Footer -->
+    <footer class="bg-neutral text-neutral-content">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 pb-10 pt-20 gap-8">
+                <div class="md:col-span-5 lg:col-span-5">
+                    <a class="text-2xl font-bold mb-4 inline-block">Event<span class="text-secondary">ify</span></a>
+                    <p class="mb-4 max-w-md text-sm">Providing reliable event booking services since 2020. Your one-stop solution for discovering and booking amazing events.</p>
+                    <div class="flex gap-4">
+                        <a class="btn btn-circle btn-ghost hover:bg-white/10">
+                            <i class='bx bxl-twitter text-xl'></i>
+                        </a>
+                        <a class="btn btn-circle btn-ghost hover:bg-white/10">
+                            <i class='bx bxl-facebook text-xl'></i>
+                        </a>
+                        <a class="btn btn-circle btn-ghost hover:bg-white/10">
+                            <i class='bx bxl-instagram text-xl'></i>
+                        </a>
+                        <a class="btn btn-circle btn-ghost hover:bg-white/10">
+                            <i class='bx bxl-linkedin text-xl'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-2 lg:col-span-2">
+                    <span class="footer-title block mb-2">Services</span>
+                    <a class="link link-hover block mb-2 text-sm">Event Planning</a>
+                    <a class="link link-hover block mb-2 text-sm">Venue Booking</a>
+                    <a class="link link-hover block mb-2 text-sm">Catering</a>
+                    <a class="link link-hover block mb-2 text-sm">Entertainment</a>
+                    <a class="link link-hover block mb-2 text-sm">Photography</a>
+                </div>
+                <div class="md:col-span-2 lg:col-span-2">
+                    <span class="footer-title block mb-2">Company</span>
+                    <a class="link link-hover block mb-2 text-sm">About us</a>
+                    <a class="link link-hover block mb-2 text-sm">Contact</a>
+                    <a class="link link-hover block mb-2 text-sm">Jobs</a>
+                    <a class="link link-hover block mb-2 text-sm">Press kit</a>
+                    <a class="link link-hover block mb-2 text-sm">Blog</a>
+                </div>
+                <div class="md:col-span-3 lg:col-span-3">
+                    <span class="footer-title block mb-2">Newsletter</span>
+                    <p class="mb-4 text-sm">Subscribe to our newsletter for the latest updates on events and promotions.</p>
+                    <div class="form-control w-full">
+                        <div class="relative">
+                            <input type="text" placeholder="Your email address"
+                                class="input input-bordered w-full pr-16 bg-neutral-focus text-neutral-content rounded-full" />
+                            <button
+                                class="btn bg-secondary hover:bg-secondary-focus border-none absolute top-0 right-0 rounded-l-none rounded-r-full text-white">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between py-4 border-t border-neutral-focus text-sm">
+                <div>
+                    <p>© 2025 Eventify Ltd. All rights reserved.</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <div class="flex flex-wrap md:flex-nowrap gap-4 md:gap-6">
+                        <a class="link link-hover">Terms of use</a>
+                        <a class="link link-hover">Privacy policy</a>
+                        <a class="link link-hover">Cookie policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for ticket selection functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Variables
+            let sectionCount = 1;
+            const ticketSections = document.getElementById('ticketSections');
+            const addTicketBtn = document.getElementById('addTicketBtn');
+            const ticketSummary = document.getElementById('ticketSummary');
+            const subtotalAmount = document.getElementById('subtotalAmount');
+            const discountRow = document.getElementById('discountRow');
+            const discountAmount = document.getElementById('discountAmount');
+            const serviceFeeAmount = document.getElementById('serviceFeeAmount');
+            const totalAmount = document.getElementById('totalAmount');
+            const serviceFeePercentage = 5; // 5% service fee
+
+            // Initialize event listeners for the first ticket section
+            initTicketSectionEvents(document.querySelector('.ticket-section'));
+
+            // Add new ticket section
+            addTicketBtn.addEventListener('click', function() {
+                if (sectionCount < 5) { // Limit to 5 tickets
+                    sectionCount++;
+
+                    // Clone the first ticket section
+                    const firstSection = document.querySelector('.ticket-section');
+                    const newSection = firstSection.cloneNode(true);
+
+                    // Update the section title
+                    newSection.querySelector('h3').textContent = `Ticket #${sectionCount}`;
+
+                    // Reset form fields
+                    newSection.querySelector('.ticket-type').value = "";
+                    newSection.querySelector('.quantity').value = "1";
+                    newSection.querySelector('.ticket-details').classList.add('hidden');
+
+                    // Show the remove button for this section
+                    const removeBtn = newSection.querySelector('.remove-section');
+                    removeBtn.style.display = 'block';
+
+                    // Add event listeners for the new section
+                    initTicketSectionEvents(newSection);
+
+                    // Add to ticket sections container
+                    ticketSections.appendChild(newSection);
+
+                    // Show/hide "Add Another Ticket" button based on count
+                    if (sectionCount >= 5) {
+                        addTicketBtn.disabled = true;
+                        addTicketBtn.classList.add('btn-disabled');
+                    }
+
+                    // Show the remove button for all sections
+                    document.querySelectorAll('.remove-section').forEach(btn => {
+                        btn.style.display = 'block';
+                    });
+                }
+            });
+
+            // Function to initialize events for a ticket section
+            function initTicketSectionEvents(section) {
+                const ticketType = section.querySelector('.ticket-type');
+                const quantity = section.querySelector('.quantity');
+                const quantityDec = section.querySelector('.quantity-dec');
+                const quantityInc = section.querySelector('.quantity-inc');
+                const ticketDetails = section.querySelector('.ticket-details');
+                const removeBtn = section.querySelector('.remove-section');
+
+                // Ticket type change event
+                ticketType.addEventListener('change', function() {
+                    const selectedOption = this.options[this.selectedIndex];
+                    const price = parseInt(selectedOption.dataset.price);
+                    const originalPrice = selectedOption.dataset.original ? parseInt(selectedOption.dataset.original) : null;
+                    const stock = parseInt(selectedOption.dataset.stock);
+                    const typeName = selectedOption.text.split(' - ')[0];
+
+                    // Update stock display
+                    section.querySelector('.stock-number').textContent = stock;
+
+                    // Update quantity max based on stock
+                    quantity.max = stock > 10 ? 10 : stock;
+
+                    // Ensure quantity is valid
+                    if (parseInt(quantity.value) > parseInt(quantity.max)) {
+                        quantity.value = quantity.max;
+                    }
+
+                    // Calculate subtotal
+                    const qty = parseInt(quantity.value);
+                    const subTotal = price * qty;
+
+                    // Update details section
+                    section.querySelector('.subtotal-label').textContent = `${qty} × ${typeName}`;
+                    section.querySelector('.subtotal').textContent = formatCurrency(subTotal);
+
+                    // Show/hide original price and discount
+                    if (originalPrice) {
+                        const originalSubtotal = originalPrice * qty;
+                        const discountValue = originalSubtotal - subTotal;
+
+                        section.querySelector('.original-price').classList.remove('hidden');
+                        section.querySelector('.original-price-value').textContent = formatCurrency(originalSubtotal);
+
+                        section.querySelector('.discount-amount').classList.remove('hidden');
+                        section.querySelector('.discount-value').textContent = `-${formatCurrency(discountValue)}`;
+                    } else {
+                        section.querySelector('.original-price').classList.add('hidden');
+                        section.querySelector('.discount-amount').classList.add('hidden');
+                    }
+
+                    // Show ticket details
+                    ticketDetails.classList.remove('hidden');
+
+                    // Update order summary
+                    updateOrderSummary();
+                });
+
+                // Quantity change events
+                quantity.addEventListener('change', function() {
+                    // Validate min/max
+                    if (this.value < 1) this.value = 1;
+                    if (parseInt(this.value) > parseInt(this.max)) this.value = this.max;
+
+                    // Only update if ticket type is selected
+                    if (ticketType.value) {
+                        const selectedOption = ticketType.options[ticketType.selectedIndex];
+                        const price = parseInt(selectedOption.dataset.price);
+                        const originalPrice = selectedOption.dataset.original ? parseInt(selectedOption.dataset.original) : null;
+                        const typeName = selectedOption.text.split(' - ')[0];
+
+                        // Calculate subtotal
+                        const qty = parseInt(this.value);
+                        const subTotal = price * qty;
+
+                        // Update details section
+                        section.querySelector('.subtotal-label').textContent = `${qty} × ${typeName}`;
+                        section.querySelector('.subtotal').textContent = formatCurrency(subTotal);
+
+                        // Show/hide original price and discount
+                        if (originalPrice) {
+                            const originalSubtotal = originalPrice * qty;
+                            const discountValue = originalSubtotal - subTotal;
+
+                            section.querySelector('.original-price-value').textContent = formatCurrency(originalSubtotal);
+                            section.querySelector('.discount-value').textContent = `-${formatCurrency(discountValue)}`;
+                        }
+
+                        // Update order summary
+                        updateOrderSummary();
+                    }
+                });
+
+                // Quantity decrement
+                quantityDec.addEventListener('click', function() {
+                    if (parseInt(quantity.value) > 1) {
+                        quantity.value = parseInt(quantity.value) - 1;
+                        // Trigger change event
+                        const event = new Event('change');
+                        quantity.dispatchEvent(event);
+                    }
+                });
+
+                // Quantity increment
+                quantityInc.addEventListener('click', function() {
+                    if (parseInt(quantity.value) < parseInt(quantity.max)) {
+                        quantity.value = parseInt(quantity.value) + 1;
+                        // Trigger change event
+                        const event = new Event('change');
+                        quantity.dispatchEvent(event);
+                    }
+                });
+
+                // Remove section button
+                removeBtn.addEventListener('click', function() {
+                    section.remove();
+                    sectionCount--;
+
+                    // Renumber remaining sections
+                    document.querySelectorAll('.ticket-section').forEach((section, index) => {
+                        section.querySelector('h3').textContent = `Ticket #${index + 1}`;
+                    });
+
+                    // Hide remove button if only one section left
+                    if (sectionCount === 1) {
+                        document.querySelector('.remove-section').style.display = 'none';
+                    }
+
+                    // Enable "Add Another Ticket" button
+                    addTicketBtn.disabled = false;
+                    addTicketBtn.classList.remove('btn-disabled');
+
+                    // Update order summary
+                    updateOrderSummary();
+                });
+            }
+
+            // Update order summary
+            function updateOrderSummary() {
+                let subtotal = 0;
+                let discount = 0;
+                let hasSelectedTickets = false;
+                let summaryHTML = '';
+
+                // Calculate from all ticket sections
+                document.querySelectorAll('.ticket-section').forEach((section, index) => {
+                    const ticketType = section.querySelector('.ticket-type');
+
+                    if (ticketType.value) {
+                        hasSelectedTickets = true;
+                        const selectedOption = ticketType.options[ticketType.selectedIndex];
+                        const price = parseInt(selectedOption.dataset.price);
+                        const originalPrice = selectedOption.dataset.original ? parseInt(selectedOption.dataset.original) : null;
+                        const typeName = selectedOption.text.split(' - ')[0];
+                        const qty = parseInt(section.querySelector('.quantity').value);
+
+                        const itemSubtotal = price * qty;
+                        subtotal += itemSubtotal;
+
+                        // Calculate discount if there's an original price
+                        if (originalPrice) {
+                            const originalSubtotal = originalPrice * qty;
+                            discount += (originalSubtotal - itemSubtotal);
+                        }
+
+                        // Add to summary HTML
+                        summaryHTML += `
+                            <div class="flex justify-between items-start mb-3">
+                                <div>
+                                    <p class="font-medium text-neutral">${typeName}</p>
+                                    <p class="text-sm text-gray-600">Quantity: ${qty}</p>
+                                </div>
+                                <span class="font-medium">${formatCurrency(itemSubtotal)}</span>
+                            </div>
+                        `;
+                    }
+                });
+
+                // Update summary
+                if (hasSelectedTickets) {
+                    ticketSummary.innerHTML = summaryHTML;
+                } else {
+                    ticketSummary.innerHTML = '<div class="text-sm text-gray-500 mb-2">No tickets selected yet</div>';
+                }
+
+                // Calculate service fee
+                const serviceFee = Math.round(subtotal * (serviceFeePercentage / 100));
+
+                // Calculate total
+                const total = subtotal + serviceFee;
+
+                // Update summary amounts
+                subtotalAmount.textContent = formatCurrency(subtotal);
+                serviceFeeAmount.textContent = formatCurrency(serviceFee);
+                totalAmount.textContent = formatCurrency(total);
+
+                // Show/hide discount row
+                if (discount > 0) {
+                    discountRow.classList.remove('hidden');
+                    discountAmount.textContent = `-${formatCurrency(discount)}`;
+                } else {
+                    discountRow.classList.add('hidden');
+                }
+
+                // Enable/disable continue button
+                const continueBtn = document.getElementById('continueBtn');
+                if (hasSelectedTickets) {
+                    continueBtn.disabled = false;
+                    continueBtn.classList.remove('btn-disabled');
+                } else {
+                    continueBtn.disabled = true;
+                    continueBtn.classList.add('btn-disabled');
+                }
+            }
+
+            // Format currency
+            function formatCurrency(amount) {
+                return `Rp ${amount.toLocaleString('id-ID')}`;
+            }
+        });
+    </script>
+</body>
+
+</html>

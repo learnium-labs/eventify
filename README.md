@@ -1,6 +1,6 @@
-# Eventify Landing Page 
+# Eventify Landing Page
 
-![bruno](/public/design/example.png)
+![eventify](/assets/images/preview.png)
 
 ### satset
 

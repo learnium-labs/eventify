@@ -1,0 +1,186 @@
+<!doctype html>
+<html data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Order Invoice - Eventify</title>
+</head>
+
+<body class="bg-base-100">
+    <!-- Invoice Content -->
+        <main>
+            <!-- Invoice Card -->
+            <div class="card bg-white">
+                <div class="card-body p-0">
+                    <!-- Invoice Header -->
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-6 mb-6">
+                        <div>
+                            <div class="flex items-center">
+                                <span class="text-primary text-xl font-bold mr-2">Event<span class="text-secondary">ify</span></span>
+                                <h1 class="text-xl font-bold">INVOICE</h1>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">Invoice #INV-EV23102788</p>
+                        </div>
+                        <div class="mt-4 sm:mt-0">
+                            <div class="inline-block rounded-lg bg-success/10 px-3 py-1 text-sm font-medium text-success">
+                                PAID
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Invoice Details -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h3 class="text-sm font-medium text-gray-500 mb-2">Bill To:</h3>
+                            <p class="font-medium mb-1">John Doe</p>
+                            <p class="text-gray-600 mb-1">john.doe@example.com</p>
+                            <p class="text-gray-600">+62 812 3456 7890</p>
+                        </div>
+                        <div class="text-right">
+                            <h3 class="text-sm font-medium text-gray-500 mb-2">Invoice Details:</h3>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Invoice Date:</span>
+                                    <span class="font-medium">April 11, 2023</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Order Number:</span>
+                                    <span class="font-medium">EV23102788</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Payment Method:</span>
+                                    <span class="font-medium">Bank Transfer</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Payment Status:</span>
+                                    <span class="font-medium text-success">Paid</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event Details -->
+                    <div class="mb-8">
+                        <h3 class="text-lg font-bold text-neutral mb-4 pb-2 border-b">Event Information</h3>
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/4">
+                                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                    alt="Tech Innovation Summit"
+                                    class="w-full h-auto object-cover rounded-lg" />
+                            </div>
+                            <div class="md:w-3/4">
+                                <div class="mb-4">
+                                    <span class="badge badge-sm bg-secondary text-white border-none">Conference</span>
+                                    <h4 class="text-xl font-bold text-neutral mt-1">Tech Innovation Summit 2023</h4>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+                                    <div class="flex items-center gap-2">
+                                        <i class='bx bx-calendar text-primary'></i>
+                                        <div>
+                                            <div class="text-sm text-gray-600">Date</div>
+                                            <div class="font-medium">March 15-16, 2023</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i class='bx bx-time text-primary'></i>
+                                        <div>
+                                            <div class="text-sm text-gray-600">Time</div>
+                                            <div class="font-medium">09:00 AM - 05:00 PM</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div class="flex items-center gap-2">
+                                        <i class='bx bx-map text-primary'></i>
+                                        <div>
+                                            <div class="text-sm text-gray-600">Venue</div>
+                                            <div class="font-medium">Jakarta Convention Center</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i class='bx bx-buildings text-primary'></i>
+                                        <div>
+                                            <div class="text-sm text-gray-600">Organizer</div>
+                                            <div class="font-medium">TechCorp Indonesia</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Details -->
+                    <div class="mb-8">
+                        <h3 class="text-lg font-bold text-neutral mb-4 pb-2 border-b">Order Summary</h3>
+                        <div class="overflow-x-auto">
+                            <table class="table w-full">
+                                <thead>
+                                    <tr class="bg-base-200">
+                                        <th class="text-neutral">Description</th>
+                                        <th class="text-right text-neutral">Quantity</th>
+                                        <th class="text-right text-neutral">Unit Price</th>
+                                        <th class="text-right text-neutral">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="font-medium">Early Bird Ticket</div>
+                                            <div class="text-sm text-gray-500">Limited availability</div>
+                                        </td>
+                                        <td class="text-right">1</td>
+                                        <td class="text-right">
+                                            <div>
+                                                <div class="text-sm text-gray-500 line-through">Rp 3.999.000</div>
+                                                <div>Rp 2.999.000</div>
+                                            </div>
+                                        </td>
+                                        <td class="text-right font-medium">Rp 2.999.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="font-medium">Regular Ticket</div>
+                                            <div class="text-sm text-gray-500">Standard access</div>
+                                        </td>
+                                        <td class="text-right">2</td>
+                                        <td class="text-right">Rp 4.599.000</td>
+                                        <td class="text-right font-medium">Rp 9.198.000</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr class="border-t border-neutral-200">
+                                        <td colspan="3" class="text-right font-medium">Subtotal</td>
+                                        <td class="text-right font-medium">Rp 12.197.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" class="text-right font-medium">Discount</td>
+                                        <td class="text-right font-medium text-success">-Rp 1.000.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" class="text-right font-medium">Service Fee (5%)</td>
+                                        <td class="text-right font-medium">Rp 609.850</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" class="text-right font-bold text-lg">TOTAL</td>
+                                        <td class="text-right font-bold text-primary text-lg">Rp 11.806.850</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+        window.addEventListener('load', function () {
+            window.print();
+        });
+        </script>
+</body>
+
+</html>

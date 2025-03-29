@@ -30,7 +30,7 @@
                     <li><a href="./pages/contact.html" class="font-medium">Contact</a></li>
                 </ul>
             </div>
-            <a class="btn btn-ghost text-xl px-0">
+            <a href="/index.html" class="btn btn-ghost text-xl px-0">
                 <span class="text-primary font-bold">Event<span class="text-secondary font-bold">ify</span></span>
             </a>
         </div>
@@ -44,7 +44,39 @@
             </ul>
         </div>
         <div class="navbar-end">
-            <a class="btn bg-primary text-balance hover:bg-primary-focus text-white border-none rounded-full">Book Now</a>
+            <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                    <div class="w-10 rounded-full">
+                        <img alt="User Avatar" src="https://i.pravatar.cc/150?img=3" />
+                    </div>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li class="mb-1">
+                        <a class="justify-between font-medium">
+                            Profile
+                            <i class='bx bx-user text-base'></i>
+                        </a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="./pages/order-history.html" class="justify-between font-medium">
+                            Order History
+                            <i class='bx bx-history text-base'></i>
+                        </a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="justify-between font-medium">
+                            Change Password
+                            <i class='bx bx-lock-alt text-base'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-error justify-between font-medium">
+                            Logout
+                            <i class='bx bx-log-out text-base'></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
